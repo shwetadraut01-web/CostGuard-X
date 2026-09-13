@@ -1,8 +1,9 @@
 import axios from 'axios';
 import type { SummaryKPIs, ServiceCost, EnvironmentCost, DailyTrend, AnomalyRecord, WasteCase } from '../types';
 
-const AWS_API_URL = 'https://7sgrmvn3yof5kqslf73zfvr3ai0dlrep.lambda-url.us-east-1.on.aws/api';
-const LOCAL_API_URL = 'http://127.0.0.1:8000/api';
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const AWS_API_URL = API_BASE.endsWith('/api') ? API_BASE : `${API_BASE}/api`;
+const LOCAL_API_URL = "http://localhost:8000/api";
 
 const MOCK_KPIS: SummaryKPIs = {
   total_spend: 84250.60,

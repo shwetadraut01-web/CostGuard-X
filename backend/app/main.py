@@ -11,7 +11,9 @@ from backend.app.routes.api import router as api_router
 app = FastAPI(
     title="CostGuard-X API",
     description="Industry-Oriented Cloud Cost Waste Intelligence Backend (No-ML)",
-    version="1.0.0"
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
 )
 
 app.add_middleware(
