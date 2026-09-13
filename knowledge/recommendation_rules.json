@@ -1,0 +1,32 @@
+{
+  "Idle Resource": [
+    "Schedule automated shutdown during off-hours (7 PM - 7 AM).",
+    "Evaluate terminating the instance if unused for > 30 consecutive days.",
+    "Migrate workload to AWS Lambda or Fargate for pay-per-use execution."
+  ],
+  "Over-provisioning": [
+    "Downsize compute instance by 1-2 tiers (e.g., c5.4xlarge -> c5.xlarge).",
+    "Switch to Graviton-based instances (e.g., t4g/m6g) for up to 20% cost savings.",
+    "Enable AWS Auto Scaling with target tracking metrics."
+  ],
+  "Non-production Waste": [
+    "Apply tags 'Environment: Dev' and configure AWS Instance Scheduler.",
+    "Automate nightly shutdown across all dev/test RDS instances and EC2 nodes.",
+    "Use Spot instances for fault-tolerant non-prod build pipelines."
+  ],
+  "Abnormal Storage Growth": [
+    "Implement S3 Lifecycle rule to transition objects to S3 Glacier after 30 days.",
+    "Scan for unattached EBS volumes and create snapshots before deleting.",
+    "Set CloudWatch log group retention limit to 14 or 30 days."
+  ],
+  "Cost Spike": [
+    "Check CloudTrail event logs for recent infrastructure deployments or scaling events.",
+    "Review API Gateway / Lambda request metrics for rogue execution loops.",
+    "Set up AWS Budgets alert at 80% threshold of expected monthly spend."
+  ],
+  "Legitimate Growth": [
+    "Purchase AWS Savings Plans or Reserved Instances for baseline capacity.",
+    "Optimize application caching to lower per-request database load.",
+    "Monitor cost per active user to track FinOps unit economics."
+  ]
+}

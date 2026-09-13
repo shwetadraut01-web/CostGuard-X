@@ -1,0 +1,66 @@
+rules:
+  - id: "RULE_IDLE_01"
+    category: "Idle Resource"
+    description: "Resource running continuously with very low CPU utilization"
+    conditions:
+      cpu_max_pct: 10.0
+      runtime_min_hours: 18.0
+      min_daily_cost: 1.0
+    base_confidence: 85
+    risk_level: "Low"
+    advisory: "Consider stopping or putting on a scheduler outside business hours."
+
+  - id: "RULE_OVERPROV_01"
+    category: "Over-provisioning"
+    description: "High-capacity compute/database instance with consistently low utilization"
+    conditions:
+      cpu_max_pct: 20.0
+      memory_max_pct: 25.0
+      min_daily_cost: 5.0
+    base_confidence: 80
+    risk_level: "Medium"
+    advisory: "Evaluate downsizing to a smaller instance type (e.g. t3.medium or r6g.large)."
+
+  - id: "RULE_NONPROD_01"
+    category: "Non-production Waste"
+    description: "Development or staging resource running 24/7 with minimal weekend/overnight activity"
+    conditions:
+      environment: ["dev", "test", "staging", "development"]
+      runtime_min_hours: 20.0
+      cpu_max_pct: 15.0
+    base_confidence: 90
+    risk_level: "Low"
+    advisory: "Implement an automated start/stop schedule for non-production environments."
+
+  - id: "RULE_STORAGE_01"
+    category: "Abnormal Storage Growth"
+    description: "Rapid storage volume expansion without corresponding read/write or request activity"
+    conditions:
+      storage_growth_pct: 15.0
+      request_growth_pct: 5.0
+      min_daily_cost: 2.0
+    base_confidence: 75
+    risk_level: "Medium"
+    advisory: "Inspect S3 lifecycle rules, unattached EBS volumes, or obsolete snapshot retention."
+
+  - id: "RULE_SPIKE_01"
+    category: "Cost Spike"
+    description: "Sudden cost jump exceeding 50% above historical rolling baseline"
+    conditions:
+      pct_change_min: 50.0
+      mad_z_score_min: 2.5
+    base_confidence: 70
+    risk_level: "High"
+    advisory: "Review recent deployments, scaling events, or API calls to verify unexpected spending."
+
+  - id: "RULE_LEGIT_01"
+    category: "Legitimate Growth"
+    description: "Cost increase accompanied by proportional increase in traffic, requests, or CPU load"
+    conditions:
+      pct_change_min: 20.0
+      request_growth_pct: 20.0
+      cpu_min_pct: 40.0
+    base_confidence: 95
+    is_waste: false
+    risk_level: "None"
+    advisory: "Spend growth aligns with legitimate application traffic growth; no waste action needed."

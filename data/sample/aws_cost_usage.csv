@@ -1,0 +1,489 @@
+timestamp,account_id,region,service,resource_id,resource_type,usage_type,usage_quantity,cost,currency,environment,application
+2026-07-15T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6465,USD,dev,Analytics API Dev
+2026-07-15T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.6834,USD,production,Customer DB
+2026-07-15T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1198,USD,test,QA Test Server
+2026-07-15T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,100.0,0.2695,USD,staging,Log Archive Storage
+2026-07-15T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,24.0,22.0924,USD,production,Core Web App
+2026-07-15T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8186,USD,dev,Batch Experiment Server
+2026-07-15T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-15T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.586,USD,production,Data Processing Cluster
+2026-07-16T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6758,USD,dev,Analytics API Dev
+2026-07-16T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.8887,USD,production,Customer DB
+2026-07-16T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9447,USD,test,QA Test Server
+2026-07-16T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,102.0,0.1731,USD,staging,Log Archive Storage
+2026-07-16T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,25.0,23.2321,USD,production,Core Web App
+2026-07-16T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0827,USD,dev,Batch Experiment Server
+2026-07-16T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-16T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,133.9854,USD,production,Data Processing Cluster
+2026-07-17T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.471,USD,dev,Analytics API Dev
+2026-07-17T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.7493,USD,production,Customer DB
+2026-07-17T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.3849,USD,test,QA Test Server
+2026-07-17T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,104.0,0.2146,USD,staging,Log Archive Storage
+2026-07-17T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,26.0,24.2259,USD,production,Core Web App
+2026-07-17T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0157,USD,dev,Batch Experiment Server
+2026-07-17T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-17T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.1644,USD,production,Data Processing Cluster
+2026-07-18T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4989,USD,dev,Analytics API Dev
+2026-07-18T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.4083,USD,production,Customer DB
+2026-07-18T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.0426,USD,test,QA Test Server
+2026-07-18T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,106.0,0.3094,USD,staging,Log Archive Storage
+2026-07-18T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,27.0,24.7858,USD,production,Core Web App
+2026-07-18T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8361,USD,dev,Batch Experiment Server
+2026-07-18T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-18T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,135.0726,USD,production,Data Processing Cluster
+2026-07-19T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5221,USD,dev,Analytics API Dev
+2026-07-19T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.8492,USD,production,Customer DB
+2026-07-19T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4391,USD,test,QA Test Server
+2026-07-19T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,108.0,0.3207,USD,staging,Log Archive Storage
+2026-07-19T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,28.0,25.1717,USD,production,Core Web App
+2026-07-19T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8643,USD,dev,Batch Experiment Server
+2026-07-19T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-19T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,136.4789,USD,production,Data Processing Cluster
+2026-07-20T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5308,USD,dev,Analytics API Dev
+2026-07-20T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.4405,USD,production,Customer DB
+2026-07-20T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4782,USD,test,QA Test Server
+2026-07-20T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,110.0,0.3636,USD,staging,Log Archive Storage
+2026-07-20T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,29.0,26.4003,USD,production,Core Web App
+2026-07-20T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8678,USD,dev,Batch Experiment Server
+2026-07-20T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-20T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.8405,USD,production,Data Processing Cluster
+2026-07-21T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.56,USD,dev,Analytics API Dev
+2026-07-21T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.5359,USD,production,Customer DB
+2026-07-21T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1161,USD,test,QA Test Server
+2026-07-21T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,112.0,0.2418,USD,staging,Log Archive Storage
+2026-07-21T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,30.0,27.6229,USD,production,Core Web App
+2026-07-21T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8341,USD,dev,Batch Experiment Server
+2026-07-21T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-21T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,133.9377,USD,production,Data Processing Cluster
+2026-07-22T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5641,USD,dev,Analytics API Dev
+2026-07-22T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.856,USD,production,Customer DB
+2026-07-22T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1845,USD,test,QA Test Server
+2026-07-22T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,114.0,0.2386,USD,staging,Log Archive Storage
+2026-07-22T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,31.0,28.3505,USD,production,Core Web App
+2026-07-22T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.9594,USD,dev,Batch Experiment Server
+2026-07-22T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-22T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,135.9522,USD,production,Data Processing Cluster
+2026-07-23T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6621,USD,dev,Analytics API Dev
+2026-07-23T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.819,USD,production,Customer DB
+2026-07-23T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4265,USD,test,QA Test Server
+2026-07-23T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,116.0,0.2448,USD,staging,Log Archive Storage
+2026-07-23T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,32.0,29.5839,USD,production,Core Web App
+2026-07-23T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.1227,USD,dev,Batch Experiment Server
+2026-07-23T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-23T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.574,USD,production,Data Processing Cluster
+2026-07-24T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6802,USD,dev,Analytics API Dev
+2026-07-24T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.2916,USD,production,Customer DB
+2026-07-24T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1105,USD,test,QA Test Server
+2026-07-24T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,118.0,0.3383,USD,staging,Log Archive Storage
+2026-07-24T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,33.0,29.8511,USD,production,Core Web App
+2026-07-24T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8336,USD,dev,Batch Experiment Server
+2026-07-24T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-24T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.2456,USD,production,Data Processing Cluster
+2026-07-25T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4875,USD,dev,Analytics API Dev
+2026-07-25T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.8749,USD,production,Customer DB
+2026-07-25T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4347,USD,test,QA Test Server
+2026-07-25T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,120.0,0.3308,USD,staging,Log Archive Storage
+2026-07-25T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,34.0,31.636,USD,production,Core Web App
+2026-07-25T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0092,USD,dev,Batch Experiment Server
+2026-07-25T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-25T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,133.6858,USD,production,Data Processing Cluster
+2026-07-26T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4238,USD,dev,Analytics API Dev
+2026-07-26T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.1134,USD,production,Customer DB
+2026-07-26T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4924,USD,test,QA Test Server
+2026-07-26T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,122.0,0.4193,USD,staging,Log Archive Storage
+2026-07-26T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,35.0,32.4255,USD,production,Core Web App
+2026-07-26T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.1353,USD,dev,Batch Experiment Server
+2026-07-26T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-26T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.9798,USD,production,Data Processing Cluster
+2026-07-27T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5686,USD,dev,Analytics API Dev
+2026-07-27T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.9035,USD,production,Customer DB
+2026-07-27T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9087,USD,test,QA Test Server
+2026-07-27T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,124.0,0.3182,USD,staging,Log Archive Storage
+2026-07-27T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,36.0,33.4042,USD,production,Core Web App
+2026-07-27T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.9393,USD,dev,Batch Experiment Server
+2026-07-27T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-27T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.5595,USD,production,Data Processing Cluster
+2026-07-28T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3728,USD,dev,Analytics API Dev
+2026-07-28T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.6689,USD,production,Customer DB
+2026-07-28T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2021,USD,test,QA Test Server
+2026-07-28T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,126.0,0.3616,USD,staging,Log Archive Storage
+2026-07-28T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,37.0,33.4984,USD,production,Core Web App
+2026-07-28T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.1494,USD,dev,Batch Experiment Server
+2026-07-28T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-28T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.2228,USD,production,Data Processing Cluster
+2026-07-29T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.397,USD,dev,Analytics API Dev
+2026-07-29T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.3905,USD,production,Customer DB
+2026-07-29T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.3473,USD,test,QA Test Server
+2026-07-29T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,128.0,0.3139,USD,staging,Log Archive Storage
+2026-07-29T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,38.0,34.9793,USD,production,Core Web App
+2026-07-29T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0283,USD,dev,Batch Experiment Server
+2026-07-29T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-29T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.9641,USD,production,Data Processing Cluster
+2026-07-30T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3684,USD,dev,Analytics API Dev
+2026-07-30T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.8237,USD,production,Customer DB
+2026-07-30T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9926,USD,test,QA Test Server
+2026-07-30T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,130.0,0.314,USD,staging,Log Archive Storage
+2026-07-30T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,39.0,35.3844,USD,production,Core Web App
+2026-07-30T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8253,USD,dev,Batch Experiment Server
+2026-07-30T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-30T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.8295,USD,production,Data Processing Cluster
+2026-07-31T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6181,USD,dev,Analytics API Dev
+2026-07-31T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.3772,USD,production,Customer DB
+2026-07-31T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2016,USD,test,QA Test Server
+2026-07-31T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,132.0,0.3607,USD,staging,Log Archive Storage
+2026-07-31T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,40.0,37.0731,USD,production,Core Web App
+2026-07-31T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0497,USD,dev,Batch Experiment Server
+2026-07-31T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-07-31T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,135.2008,USD,production,Data Processing Cluster
+2026-08-01T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.351,USD,dev,Analytics API Dev
+2026-08-01T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.1939,USD,production,Customer DB
+2026-08-01T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1772,USD,test,QA Test Server
+2026-08-01T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,134.0,0.3585,USD,staging,Log Archive Storage
+2026-08-01T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,41.0,37.6948,USD,production,Core Web App
+2026-08-01T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8072,USD,dev,Batch Experiment Server
+2026-08-01T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-01T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,135.4577,USD,production,Data Processing Cluster
+2026-08-02T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4596,USD,dev,Analytics API Dev
+2026-08-02T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.4199,USD,production,Customer DB
+2026-08-02T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.0058,USD,test,QA Test Server
+2026-08-02T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,136.0,0.3351,USD,staging,Log Archive Storage
+2026-08-02T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,42.0,38.5806,USD,production,Core Web App
+2026-08-02T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0529,USD,dev,Batch Experiment Server
+2026-08-02T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-02T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.9812,USD,production,Data Processing Cluster
+2026-08-03T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5098,USD,dev,Analytics API Dev
+2026-08-03T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.8733,USD,production,Customer DB
+2026-08-03T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9163,USD,test,QA Test Server
+2026-08-03T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,138.0,0.2719,USD,staging,Log Archive Storage
+2026-08-03T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,43.0,39.0208,USD,production,Core Web App
+2026-08-03T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.12,USD,dev,Batch Experiment Server
+2026-08-03T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-03T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,136.9813,USD,production,Data Processing Cluster
+2026-08-04T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4367,USD,dev,Analytics API Dev
+2026-08-04T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.9361,USD,production,Customer DB
+2026-08-04T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.3799,USD,test,QA Test Server
+2026-08-04T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,140.0,0.3817,USD,staging,Log Archive Storage
+2026-08-04T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,44.0,40.4668,USD,production,Core Web App
+2026-08-04T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.9032,USD,dev,Batch Experiment Server
+2026-08-04T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-04T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.4858,USD,production,Data Processing Cluster
+2026-08-05T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3701,USD,dev,Analytics API Dev
+2026-08-05T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.5828,USD,production,Customer DB
+2026-08-05T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2398,USD,test,QA Test Server
+2026-08-05T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,142.0,0.4252,USD,staging,Log Archive Storage
+2026-08-05T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,45.0,40.9649,USD,production,Core Web App
+2026-08-05T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8125,USD,dev,Batch Experiment Server
+2026-08-05T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-05T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.6396,USD,production,Data Processing Cluster
+2026-08-06T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3547,USD,dev,Analytics API Dev
+2026-08-06T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.1588,USD,production,Customer DB
+2026-08-06T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9237,USD,test,QA Test Server
+2026-08-06T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,144.0,0.3976,USD,staging,Log Archive Storage
+2026-08-06T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,46.0,42.5822,USD,production,Core Web App
+2026-08-06T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8136,USD,dev,Batch Experiment Server
+2026-08-06T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-06T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.0673,USD,production,Data Processing Cluster
+2026-08-07T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4275,USD,dev,Analytics API Dev
+2026-08-07T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.3747,USD,production,Customer DB
+2026-08-07T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1879,USD,test,QA Test Server
+2026-08-07T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,146.0,0.443,USD,staging,Log Archive Storage
+2026-08-07T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,47.0,43.0011,USD,production,Core Web App
+2026-08-07T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.9685,USD,dev,Batch Experiment Server
+2026-08-07T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-07T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.2526,USD,production,Data Processing Cluster
+2026-08-08T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3668,USD,dev,Analytics API Dev
+2026-08-08T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.6765,USD,production,Customer DB
+2026-08-08T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4567,USD,test,QA Test Server
+2026-08-08T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,148.0,0.4463,USD,staging,Log Archive Storage
+2026-08-08T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,48.0,44.196,USD,production,Core Web App
+2026-08-08T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8616,USD,dev,Batch Experiment Server
+2026-08-08T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-08T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.2648,USD,production,Data Processing Cluster
+2026-08-09T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3324,USD,dev,Analytics API Dev
+2026-08-09T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.3247,USD,production,Customer DB
+2026-08-09T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4103,USD,test,QA Test Server
+2026-08-09T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,150.0,0.4395,USD,staging,Log Archive Storage
+2026-08-09T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,49.0,45.0968,USD,production,Core Web App
+2026-08-09T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0474,USD,dev,Batch Experiment Server
+2026-08-09T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-09T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.0107,USD,production,Data Processing Cluster
+2026-08-10T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3428,USD,dev,Analytics API Dev
+2026-08-10T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.4372,USD,production,Customer DB
+2026-08-10T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2725,USD,test,QA Test Server
+2026-08-10T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,152.0,0.4991,USD,staging,Log Archive Storage
+2026-08-10T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,50.0,46.083,USD,production,Core Web App
+2026-08-10T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.852,USD,dev,Batch Experiment Server
+2026-08-10T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-10T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.6754,USD,production,Data Processing Cluster
+2026-08-11T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4729,USD,dev,Analytics API Dev
+2026-08-11T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.3941,USD,production,Customer DB
+2026-08-11T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4809,USD,test,QA Test Server
+2026-08-11T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,154.0,0.4649,USD,staging,Log Archive Storage
+2026-08-11T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,51.0,47.0948,USD,production,Core Web App
+2026-08-11T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.1044,USD,dev,Batch Experiment Server
+2026-08-11T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-11T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.7038,USD,production,Data Processing Cluster
+2026-08-12T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.492,USD,dev,Analytics API Dev
+2026-08-12T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.6049,USD,production,Customer DB
+2026-08-12T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9059,USD,test,QA Test Server
+2026-08-12T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,156.0,0.3861,USD,staging,Log Archive Storage
+2026-08-12T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,52.0,47.1999,USD,production,Core Web App
+2026-08-12T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8314,USD,dev,Batch Experiment Server
+2026-08-12T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-12T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.6274,USD,production,Data Processing Cluster
+2026-08-13T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.519,USD,dev,Analytics API Dev
+2026-08-13T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.7471,USD,production,Customer DB
+2026-08-13T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2952,USD,test,QA Test Server
+2026-08-13T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,158.0,0.367,USD,staging,Log Archive Storage
+2026-08-13T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,53.0,49.0797,USD,production,Core Web App
+2026-08-13T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.1899,USD,dev,Batch Experiment Server
+2026-08-13T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-13T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.2096,USD,production,Data Processing Cluster
+2026-08-14T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4687,USD,dev,Analytics API Dev
+2026-08-14T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.6316,USD,production,Customer DB
+2026-08-14T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1954,USD,test,QA Test Server
+2026-08-14T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,160.0,0.4296,USD,staging,Log Archive Storage
+2026-08-14T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,54.0,49.3592,USD,production,Core Web App
+2026-08-14T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0372,USD,dev,Batch Experiment Server
+2026-08-14T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-14T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.7852,USD,production,Data Processing Cluster
+2026-08-15T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3147,USD,dev,Analytics API Dev
+2026-08-15T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.7058,USD,production,Customer DB
+2026-08-15T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1713,USD,test,QA Test Server
+2026-08-15T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,310.0,0.735,USD,staging,Log Archive Storage
+2026-08-15T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,55.0,50.065,USD,production,Core Web App
+2026-08-15T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.1947,USD,dev,Batch Experiment Server
+2026-08-15T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-15T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.9331,USD,production,Data Processing Cluster
+2026-08-16T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6352,USD,dev,Analytics API Dev
+2026-08-16T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.4309,USD,production,Customer DB
+2026-08-16T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2947,USD,test,QA Test Server
+2026-08-16T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,460.0,1.208,USD,staging,Log Archive Storage
+2026-08-16T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,56.0,51.7041,USD,production,Core Web App
+2026-08-16T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.113,USD,dev,Batch Experiment Server
+2026-08-16T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-16T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,136.5737,USD,production,Data Processing Cluster
+2026-08-17T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3909,USD,dev,Analytics API Dev
+2026-08-17T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.0191,USD,production,Customer DB
+2026-08-17T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2647,USD,test,QA Test Server
+2026-08-17T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,610.0,1.7178,USD,staging,Log Archive Storage
+2026-08-17T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,57.0,51.7682,USD,production,Core Web App
+2026-08-17T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8783,USD,dev,Batch Experiment Server
+2026-08-17T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-17T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.1097,USD,production,Data Processing Cluster
+2026-08-18T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5724,USD,dev,Analytics API Dev
+2026-08-18T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.9835,USD,production,Customer DB
+2026-08-18T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4305,USD,test,QA Test Server
+2026-08-18T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,760.0,2.0089,USD,staging,Log Archive Storage
+2026-08-18T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,58.0,53.5065,USD,production,Core Web App
+2026-08-18T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.16,USD,dev,Batch Experiment Server
+2026-08-18T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,0.0,0.0,USD,production,Payment Gateway v2
+2026-08-18T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.5732,USD,production,Data Processing Cluster
+2026-08-19T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5378,USD,dev,Analytics API Dev
+2026-08-19T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.1924,USD,production,Customer DB
+2026-08-19T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9514,USD,test,QA Test Server
+2026-08-19T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,910.0,2.372,USD,staging,Log Archive Storage
+2026-08-19T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,59.0,53.9383,USD,production,Core Web App
+2026-08-19T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8278,USD,dev,Batch Experiment Server
+2026-08-19T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.4264,USD,production,Payment Gateway v2
+2026-08-19T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.7912,USD,production,Data Processing Cluster
+2026-08-20T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3939,USD,dev,Analytics API Dev
+2026-08-20T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.1236,USD,production,Customer DB
+2026-08-20T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.0819,USD,test,QA Test Server
+2026-08-20T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,1060.0,2.9141,USD,staging,Log Archive Storage
+2026-08-20T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,60.0,55.0538,USD,production,Core Web App
+2026-08-20T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.9222,USD,dev,Batch Experiment Server
+2026-08-20T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.6811,USD,production,Payment Gateway v2
+2026-08-20T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,136.8356,USD,production,Data Processing Cluster
+2026-08-21T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5425,USD,dev,Analytics API Dev
+2026-08-21T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.5258,USD,production,Customer DB
+2026-08-21T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1637,USD,test,QA Test Server
+2026-08-21T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,1210.0,3.2506,USD,staging,Log Archive Storage
+2026-08-21T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,61.0,56.0669,USD,production,Core Web App
+2026-08-21T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8608,USD,dev,Batch Experiment Server
+2026-08-21T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.7869,USD,production,Payment Gateway v2
+2026-08-21T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,135.0565,USD,production,Data Processing Cluster
+2026-08-22T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5934,USD,dev,Analytics API Dev
+2026-08-22T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.6371,USD,production,Customer DB
+2026-08-22T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1927,USD,test,QA Test Server
+2026-08-22T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,1360.0,3.6955,USD,staging,Log Archive Storage
+2026-08-22T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,62.0,56.4314,USD,production,Core Web App
+2026-08-22T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.9953,USD,dev,Batch Experiment Server
+2026-08-22T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.628,USD,production,Payment Gateway v2
+2026-08-22T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.0452,USD,production,Data Processing Cluster
+2026-08-23T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3167,USD,dev,Analytics API Dev
+2026-08-23T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.8533,USD,production,Customer DB
+2026-08-23T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2962,USD,test,QA Test Server
+2026-08-23T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,1510.0,3.9431,USD,staging,Log Archive Storage
+2026-08-23T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,63.0,58.2179,USD,production,Core Web App
+2026-08-23T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.9182,USD,dev,Batch Experiment Server
+2026-08-23T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.5151,USD,production,Payment Gateway v2
+2026-08-23T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,135.4945,USD,production,Data Processing Cluster
+2026-08-24T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.379,USD,dev,Analytics API Dev
+2026-08-24T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.7522,USD,production,Customer DB
+2026-08-24T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.227,USD,test,QA Test Server
+2026-08-24T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,1660.0,4.3596,USD,staging,Log Archive Storage
+2026-08-24T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,64.0,58.2984,USD,production,Core Web App
+2026-08-24T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0904,USD,dev,Batch Experiment Server
+2026-08-24T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.4067,USD,production,Payment Gateway v2
+2026-08-24T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.7693,USD,production,Data Processing Cluster
+2026-08-25T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5217,USD,dev,Analytics API Dev
+2026-08-25T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.8269,USD,production,Customer DB
+2026-08-25T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4317,USD,test,QA Test Server
+2026-08-25T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,1810.0,4.8658,USD,staging,Log Archive Storage
+2026-08-25T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,65.0,59.0866,USD,production,Core Web App
+2026-08-25T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.0478,USD,dev,Batch Experiment Server
+2026-08-25T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.464,USD,production,Payment Gateway v2
+2026-08-25T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.9895,USD,production,Data Processing Cluster
+2026-08-26T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5943,USD,dev,Analytics API Dev
+2026-08-26T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.9099,USD,production,Customer DB
+2026-08-26T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9157,USD,test,QA Test Server
+2026-08-26T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,1960.0,5.2303,USD,staging,Log Archive Storage
+2026-08-26T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,66.0,60.2987,USD,production,Core Web App
+2026-08-26T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,6.1763,USD,dev,Batch Experiment Server
+2026-08-26T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.3864,USD,production,Payment Gateway v2
+2026-08-26T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.9534,USD,production,Data Processing Cluster
+2026-08-27T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4799,USD,dev,Analytics API Dev
+2026-08-27T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.0324,USD,production,Customer DB
+2026-08-27T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4621,USD,test,QA Test Server
+2026-08-27T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,2110.0,5.6728,USD,staging,Log Archive Storage
+2026-08-27T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,67.0,61.898,USD,production,Core Web App
+2026-08-27T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.9026,USD,dev,Batch Experiment Server
+2026-08-27T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.0913,USD,production,Payment Gateway v2
+2026-08-27T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.1608,USD,production,Data Processing Cluster
+2026-08-28T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5182,USD,dev,Analytics API Dev
+2026-08-28T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.7586,USD,production,Customer DB
+2026-08-28T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4223,USD,test,QA Test Server
+2026-08-28T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,2260.0,6.0811,USD,staging,Log Archive Storage
+2026-08-28T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,68.0,61.8605,USD,production,Core Web App
+2026-08-28T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,5.8261,USD,dev,Batch Experiment Server
+2026-08-28T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.3043,USD,production,Payment Gateway v2
+2026-08-28T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,135.8075,USD,production,Data Processing Cluster
+2026-08-29T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3737,USD,dev,Analytics API Dev
+2026-08-29T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.3036,USD,production,Customer DB
+2026-08-29T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4292,USD,test,QA Test Server
+2026-08-29T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,2410.0,6.4386,USD,staging,Log Archive Storage
+2026-08-29T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,69.0,63.2774,USD,production,Core Web App
+2026-08-29T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,89.3774,USD,dev,Batch Experiment Server
+2026-08-29T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.5682,USD,production,Payment Gateway v2
+2026-08-29T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.0112,USD,production,Data Processing Cluster
+2026-08-30T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6916,USD,dev,Analytics API Dev
+2026-08-30T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.3557,USD,production,Customer DB
+2026-08-30T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.0276,USD,test,QA Test Server
+2026-08-30T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,2560.0,6.9143,USD,staging,Log Archive Storage
+2026-08-30T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,70.0,64.5379,USD,production,Core Web App
+2026-08-30T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,89.5643,USD,dev,Batch Experiment Server
+2026-08-30T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.3576,USD,production,Payment Gateway v2
+2026-08-30T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.2521,USD,production,Data Processing Cluster
+2026-08-31T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6491,USD,dev,Analytics API Dev
+2026-08-31T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.8013,USD,production,Customer DB
+2026-08-31T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.3007,USD,test,QA Test Server
+2026-08-31T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,2710.0,7.1425,USD,staging,Log Archive Storage
+2026-08-31T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,71.0,64.8228,USD,production,Core Web App
+2026-08-31T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,89.6783,USD,dev,Batch Experiment Server
+2026-08-31T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.4792,USD,production,Payment Gateway v2
+2026-08-31T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,135.1047,USD,production,Data Processing Cluster
+2026-09-01T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.4538,USD,dev,Analytics API Dev
+2026-09-01T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.5709,USD,production,Customer DB
+2026-09-01T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.0988,USD,test,QA Test Server
+2026-09-01T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,2860.0,7.5828,USD,staging,Log Archive Storage
+2026-09-01T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,72.0,65.707,USD,production,Core Web App
+2026-09-01T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,88.5663,USD,dev,Batch Experiment Server
+2026-09-01T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.4576,USD,production,Payment Gateway v2
+2026-09-01T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.0713,USD,production,Data Processing Cluster
+2026-09-02T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6295,USD,dev,Analytics API Dev
+2026-09-02T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.1038,USD,production,Customer DB
+2026-09-02T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.3507,USD,test,QA Test Server
+2026-09-02T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,3010.0,8.115,USD,staging,Log Archive Storage
+2026-09-02T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,73.0,67.0852,USD,production,Core Web App
+2026-09-02T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,89.2147,USD,dev,Batch Experiment Server
+2026-09-02T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.5792,USD,production,Payment Gateway v2
+2026-09-02T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,133.7702,USD,production,Data Processing Cluster
+2026-09-03T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6156,USD,dev,Analytics API Dev
+2026-09-03T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.0822,USD,production,Customer DB
+2026-09-03T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9856,USD,test,QA Test Server
+2026-09-03T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,3160.0,8.3318,USD,staging,Log Archive Storage
+2026-09-03T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,74.0,67.9792,USD,production,Core Web App
+2026-09-03T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,89.0476,USD,dev,Batch Experiment Server
+2026-09-03T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.1743,USD,production,Payment Gateway v2
+2026-09-03T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.7841,USD,production,Data Processing Cluster
+2026-09-04T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5412,USD,dev,Analytics API Dev
+2026-09-04T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.0414,USD,production,Customer DB
+2026-09-04T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.0556,USD,test,QA Test Server
+2026-09-04T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,3310.0,8.7807,USD,staging,Log Archive Storage
+2026-09-04T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,75.0,69.2164,USD,production,Core Web App
+2026-09-04T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,88.7308,USD,dev,Batch Experiment Server
+2026-09-04T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.7951,USD,production,Payment Gateway v2
+2026-09-04T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.8533,USD,production,Data Processing Cluster
+2026-09-05T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3595,USD,dev,Analytics API Dev
+2026-09-05T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.7032,USD,production,Customer DB
+2026-09-05T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.1446,USD,test,QA Test Server
+2026-09-05T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,3460.0,9.3179,USD,staging,Log Archive Storage
+2026-09-05T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,76.0,69.3671,USD,production,Core Web App
+2026-09-05T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,86.9371,USD,dev,Batch Experiment Server
+2026-09-05T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.4083,USD,production,Payment Gateway v2
+2026-09-05T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.8066,USD,production,Data Processing Cluster
+2026-09-06T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5962,USD,dev,Analytics API Dev
+2026-09-06T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.5886,USD,production,Customer DB
+2026-09-06T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.3849,USD,test,QA Test Server
+2026-09-06T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,3610.0,9.6312,USD,staging,Log Archive Storage
+2026-09-06T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,77.0,70.3829,USD,production,Core Web App
+2026-09-06T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,86.8074,USD,dev,Batch Experiment Server
+2026-09-06T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.1859,USD,production,Payment Gateway v2
+2026-09-06T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,133.3562,USD,production,Data Processing Cluster
+2026-09-07T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5856,USD,dev,Analytics API Dev
+2026-09-07T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.9967,USD,production,Customer DB
+2026-09-07T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2067,USD,test,QA Test Server
+2026-09-07T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,3760.0,9.9392,USD,staging,Log Archive Storage
+2026-09-07T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,78.0,71.8393,USD,production,Core Web App
+2026-09-07T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,86.5153,USD,dev,Batch Experiment Server
+2026-09-07T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.2507,USD,production,Payment Gateway v2
+2026-09-07T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,136.1221,USD,production,Data Processing Cluster
+2026-09-08T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6127,USD,dev,Analytics API Dev
+2026-09-08T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.7089,USD,production,Customer DB
+2026-09-08T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.0272,USD,test,QA Test Server
+2026-09-08T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,3910.0,10.3698,USD,staging,Log Archive Storage
+2026-09-08T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,79.0,72.5945,USD,production,Core Web App
+2026-09-08T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,88.931,USD,dev,Batch Experiment Server
+2026-09-08T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.5706,USD,production,Payment Gateway v2
+2026-09-08T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,133.6056,USD,production,Data Processing Cluster
+2026-09-09T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.5076,USD,dev,Analytics API Dev
+2026-09-09T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.5169,USD,production,Customer DB
+2026-09-09T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.2108,USD,test,QA Test Server
+2026-09-09T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,4060.0,10.7866,USD,staging,Log Archive Storage
+2026-09-09T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,80.0,73.4798,USD,production,Core Web App
+2026-09-09T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,90.3968,USD,dev,Batch Experiment Server
+2026-09-09T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.2423,USD,production,Payment Gateway v2
+2026-09-09T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.7467,USD,production,Data Processing Cluster
+2026-09-10T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6244,USD,dev,Analytics API Dev
+2026-09-10T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,47.97,USD,production,Customer DB
+2026-09-10T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9806,USD,test,QA Test Server
+2026-09-10T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,4210.0,11.2268,USD,staging,Log Archive Storage
+2026-09-10T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,81.0,74.4296,USD,production,Core Web App
+2026-09-10T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,86.805,USD,dev,Batch Experiment Server
+2026-09-10T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.3564,USD,production,Payment Gateway v2
+2026-09-10T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,137.7638,USD,production,Data Processing Cluster
+2026-09-11T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.6632,USD,dev,Analytics API Dev
+2026-09-11T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.2183,USD,production,Customer DB
+2026-09-11T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,15.9073,USD,test,QA Test Server
+2026-09-11T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,4360.0,11.5724,USD,staging,Log Archive Storage
+2026-09-11T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,82.0,75.301,USD,production,Core Web App
+2026-09-11T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,87.3883,USD,dev,Batch Experiment Server
+2026-09-11T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.5299,USD,production,Payment Gateway v2
+2026-09-11T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,134.2303,USD,production,Data Processing Cluster
+2026-09-12T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3407,USD,dev,Analytics API Dev
+2026-09-12T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.4505,USD,production,Customer DB
+2026-09-12T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.4365,USD,test,QA Test Server
+2026-09-12T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,4510.0,12.0827,USD,staging,Log Archive Storage
+2026-09-12T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,83.0,76.0597,USD,production,Core Web App
+2026-09-12T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,88.4902,USD,dev,Batch Experiment Server
+2026-09-12T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.0552,USD,production,Payment Gateway v2
+2026-09-12T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,136.6267,USD,production,Data Processing Cluster
+2026-09-13T00:00:00Z,123456789012,us-east-1,EC2,i-0dev123456789a,t3.xlarge,Hrs,24.0,14.3905,USD,dev,Analytics API Dev
+2026-09-13T00:00:00Z,123456789012,us-east-1,RDS,db-overprov-prod01,db.r5.2xlarge,Hrs,24.0,48.163,USD,production,Customer DB
+2026-09-13T00:00:00Z,123456789012,us-west-2,EC2,i-0nonprod998877,m5.large,Hrs,24.0,16.009,USD,test,QA Test Server
+2026-09-13T00:00:00Z,123456789012,us-east-1,EBS,vol-0storagebloat01,gp3,GB-Mo,4660.0,12.5236,USD,staging,Log Archive Storage
+2026-09-13T00:00:00Z,123456789012,us-east-1,EC2,i-0prodapp0123,c5.2xlarge,Hrs,84.0,77.2542,USD,production,Core Web App
+2026-09-13T00:00:00Z,123456789012,us-west-1,EC2,i-0spike991122,c5.4xlarge,Hrs,24.0,88.0728,USD,dev,Batch Experiment Server
+2026-09-13T00:00:00Z,123456789012,eu-west-1,EC2,i-0newdeploy77,m5.xlarge,Hrs,24.0,28.467,USD,production,Payment Gateway v2
+2026-09-13T00:00:00Z,123456789012,us-east-1,EC2,i-0heavyworker01,c5n.9xlarge,Hrs,24.0,132.6151,USD,production,Data Processing Cluster

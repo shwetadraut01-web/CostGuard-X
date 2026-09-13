@@ -1,0 +1,32 @@
+{
+  "Idle Resource": {
+    "definition": "A cloud resource (e.g., EC2, RDS) that remains active and billed while consuming under 10% CPU and low network/disk IO.",
+    "financial_impact": "High cumulative waste due to 24/7 billing without business utility.",
+    "remediation": "Stop resource outside operating hours or terminate if unneeded."
+  },
+  "Over-provisioning": {
+    "definition": "A resource provisioned with capacity significantly exceeding peak demand requirements.",
+    "financial_impact": "Substantial premium paid for unused RAM, vCPU, or IOPS capacity.",
+    "remediation": "Right-size instance family or switch to burstable/auto-scaling instances."
+  },
+  "Non-production Waste": {
+    "definition": "Dev/Test/Staging environments left running during non-working hours and weekends.",
+    "financial_impact": "Up to 68% of non-prod cloud spend wasted on off-hours runtime.",
+    "remediation": "Enforce automated instance scheduling (e.g., AWS Instance Scheduler)."
+  },
+  "Abnormal Storage Growth": {
+    "definition": "Unbounded expansion of S3 objects, EBS volumes, or log files without traffic/request increase.",
+    "financial_impact": "Monotonically increasing recurring storage costs and unindexed data bloat.",
+    "remediation": "Configure S3 Lifecycle policies, delete unattached EBS volumes, and trim log retention."
+  },
+  "Cost Spike": {
+    "definition": "A sharp, unexplained deviation in spend compared to historical baseline behavior.",
+    "financial_impact": "Immediate budget overruns if left undetected.",
+    "remediation": "Investigate recent IAM deployment logs, scaling policies, or runaway serverless executions."
+  },
+  "Legitimate Growth": {
+    "definition": "Increased cloud spend correlated directly with business growth metrics (user requests, active connections, transaction volumes).",
+    "financial_impact": "Expected cost increase supporting revenue/usage growth.",
+    "remediation": "Optimize unit cost rather than cutting infrastructure capacity."
+  }
+}

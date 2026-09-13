@@ -1,0 +1,9 @@
+resource_id,service,resource_type,instance_type,region,environment,application,owner
+i-0dev123456789a,EC2,t3.xlarge,t3.xlarge,us-east-1,dev,Analytics API Dev,dev-team@company.com
+db-overprov-prod01,RDS,db.r5.2xlarge,db.r5.2xlarge,us-east-1,production,Customer DB,db-admin@company.com
+i-0nonprod998877,EC2,m5.large,m5.large,us-west-2,test,QA Test Server,qa-team@company.com
+vol-0storagebloat01,EBS,gp3,gp3,us-east-1,staging,Log Archive Storage,ops@company.com
+i-0prodapp0123,EC2,c5.2xlarge,c5.2xlarge,us-east-1,production,Core Web App,web-team@company.com
+i-0spike991122,EC2,c5.4xlarge,c5.4xlarge,us-west-1,dev,Batch Experiment Server,data-team@company.com
+i-0newdeploy77,EC2,m5.xlarge,m5.xlarge,eu-west-1,production,Payment Gateway v2,fintech@company.com
+i-0heavyworker01,EC2,c5n.9xlarge,c5n.9xlarge,us-east-1,production,Data Processing Cluster,etl-team@company.com

@@ -1,0 +1,21 @@
+anomaly_detection:
+  moving_average:
+    window_days: 7
+    deviation_threshold_pct: 35.0
+  z_score:
+    warning_threshold: 2.0
+    critical_threshold: 3.0
+  mad_robust_z_score:
+    warning_threshold: 2.5
+    critical_threshold: 3.5
+  pct_change:
+    spike_threshold_pct: 50.0
+
+waste_thresholds:
+  idle_cpu_max_pct: 10.0
+  idle_runtime_min_hours: 18.0
+  overprovisioned_cpu_max_pct: 20.0
+  overprovisioned_memory_max_pct: 25.0
+  storage_growth_daily_max_pct: 15.0
+  storage_activity_min_growth_pct: 5.0
+  non_prod_environments: ["dev", "development", "test", "testing", "staging", "sandbox"]

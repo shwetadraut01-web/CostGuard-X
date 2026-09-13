@@ -1,0 +1,16 @@
+{
+  "safety_notice": "CostGuard-X operates strictly as a read-only advisory and cost-intelligence system. No automated changes or infrastructure modifications are made.",
+  "guiding_principles": [
+    "Advisory Only: Never execute CLI / SDK commands that modify, stop, or delete AWS resources.",
+    "Human-in-the-Loop: All waste recommendations require manual review by cloud engineers or FinOps specialists.",
+    "Production Safeguards: Never recommend aggressive downsizing for production resources without 14 days of metrics.",
+    "Conservative Counterfactuals: Always label cost savings as estimates based on historical usage assumptions."
+  ],
+  "restricted_actions": [
+    "ec2:TerminateInstances",
+    "ec2:StopInstances",
+    "rds:DeleteDBInstance",
+    "s3:DeleteBucket",
+    "s3:DeleteObject"
+  ]
+}

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.venv
+venv/
+ENV/
+
+# Node / React
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Terraform & AWS Artifacts
+.terraform/
+*.tfstate
+*.tfstate.backup
+lambda_payload.zip
+infrastructure/terraform/lambda_payload.zip
+
+# Environment & Logs
+.env
+*.log
+.DS_Store

@@ -1,0 +1,4 @@
+event_timestamp,resource_id,event_type,event_name,user_or_role,application,environment
+2026-08-19T09:15:00Z,i-0newdeploy77,Infrastructure,RunInstances,arn:aws:iam::123456789012:role/DevOpsAdmin,Payment Gateway v2,production
+2026-08-29T14:30:00Z,i-0spike991122,Configuration,ConfigurationChange,arn:aws:iam::123456789012:user/developer-alex,Batch Experiment Server,dev
+2026-08-14T11:00:00Z,vol-0storagebloat01,Storage,ModifyVolume,arn:aws:iam::123456789012:role/AutoScaler,Log Archive Storage,staging
