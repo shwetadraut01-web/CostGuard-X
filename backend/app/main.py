@@ -17,13 +17,25 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
+# Configurable CORS origins with fallback to '*'
+cors_origins_env = os.getenv("CORS_ORIGINS", "*")
+allowed_origins = [origin.strip() for origin in cors_origins_env.split(",") if origin.strip()] if cors_origins_env != "*" else ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request, exc):
+    return {
+        "status": "error",
+        "message": "An internal server error occurred.",
+        "detail": str(exc) if os.getenv("APP_MODE") == "debug" else "Safe execution mode"
+    }
 
 app.include_router(api_router)
 
@@ -33,6 +45,7 @@ def read_root():
         "app": "CostGuard-X Backend API",
         "status": "online",
         "mode": os.getenv("APP_MODE", "local"),
+        "iam_mode": "Read-Only Advisory Mode",
         "docs_url": "/docs"
     }
 

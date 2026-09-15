@@ -25,3 +25,25 @@ def test_cost_schema_missing_column():
     is_valid, errors = SchemaValidator.validate_cost_schema(df_invalid)
     assert is_valid is False
     assert len(errors) > 0
+
+def test_what_if_pydantic_range_bounds():
+    """Verify WhatIfRequest enforces strict range limits (runtime 0-24h, downsize 0-100%)."""
+    from backend.app.models.schemas import WhatIfRequest
+    from pydantic import ValidationError
+
+    # Valid request
+    valid_req = WhatIfRequest(custom_runtime_hours=12.0, custom_downsize_pct=50.0, custom_storage_archival_pct=70.0)
+    assert valid_req.custom_runtime_hours == 12.0
+
+    # Invalid runtime (> 24 hours)
+    with pytest.raises(ValidationError):
+        WhatIfRequest(custom_runtime_hours=30.0)
+
+    # Invalid downsize percentage (< 0%)
+    with pytest.raises(ValidationError):
+        WhatIfRequest(custom_downsize_pct=-10.0)
+
+    # Invalid storage percentage (> 100%)
+    with pytest.raises(ValidationError):
+        WhatIfRequest(custom_storage_archival_pct=150.0)
+

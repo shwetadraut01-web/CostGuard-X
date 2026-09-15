@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import type { AnomalyRecord } from '../types';
-import { AlertTriangle, Filter, Eye } from 'lucide-react';
-
-import type { CurrencyCode } from '../utils/currency';
+import { AlertTriangle, Filter, Eye, Clock } from 'lucide-react';
+import { formatCurrency, type CurrencyCode } from '../utils/currency';
 import type { Language } from '../utils/i18n';
 
 interface AnomalyExplorerProps {
@@ -16,7 +15,7 @@ interface AnomalyExplorerProps {
 export const AnomalyExplorerPage: React.FC<AnomalyExplorerProps> = ({
   anomalies,
   onSelectResource,
-  currency: _currency = 'USD',
+  currency = 'USD',
   language: _language = 'en',
   theme = 'light'
 }) => {
@@ -31,13 +30,21 @@ export const AnomalyExplorerPage: React.FC<AnomalyExplorerProps> = ({
 
   return (
     <div className="space-y-6">
-      <div>
-        <h2 className={`text-xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
-          Statistical Anomaly Explorer (No-ML)
-        </h2>
-        <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
-          Flagged statistical anomalies detected using Moving Averages, Standard Z-score, and Robust Median Absolute Deviation (MAD Z-Score).
-        </p>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <div>
+          <h2 className={`text-xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
+            Statistical Anomaly Explorer (No-ML)
+          </h2>
+          <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+            Flagged statistical anomalies detected using Moving Averages, Standard Z-score, and Robust Median Absolute Deviation (MAD Z-Score).
+          </p>
+        </div>
+        <div className={`text-[11px] font-mono px-2.5 py-1 rounded border flex items-center space-x-1.5 ${
+          isDark ? 'bg-slate-800/80 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
+        }`}>
+          <Clock className="h-3.5 w-3.5 text-blue-500" />
+          <span>Data Freshness: 2026-09-15 16:00 UTC</span>
+        </div>
       </div>
 
       <div className={`${
@@ -96,8 +103,8 @@ export const AnomalyExplorerPage: React.FC<AnomalyExplorerProps> = ({
                   </td>
                   <td className={`px-4 py-3 max-w-xs truncate ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>{anom.detection_method}</td>
                   <td className="px-4 py-3 text-center font-mono font-bold text-amber-600 dark:text-amber-400">{anom.robust_mad_z_score}</td>
-                  <td className={`px-4 py-3 text-right font-mono ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>${anom.baseline_cost.toFixed(2)}</td>
-                  <td className="px-4 py-3 text-right font-mono font-bold text-rose-600 dark:text-red-400">${anom.current_cost.toFixed(2)}</td>
+                  <td className={`px-4 py-3 text-right font-mono ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{formatCurrency(anom.baseline_cost, currency)}</td>
+                  <td className="px-4 py-3 text-right font-mono font-bold text-rose-600 dark:text-red-400">{formatCurrency(anom.current_cost, currency)}</td>
                   <td className="px-4 py-3 text-center">
                     <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-bold ${
                       anom.severity === 'High'
@@ -162,15 +169,19 @@ export const AnomalyExplorerPage: React.FC<AnomalyExplorerProps> = ({
               </div>
               <div className={`flex justify-between py-1 border-b ${isDark ? 'border-slate-800' : 'border-slate-100'}`}>
                 <span className={isDark ? 'text-slate-400' : 'text-slate-500'}>Baseline Cost:</span>
-                <span className={`font-mono ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>${selectedAnomaly.baseline_cost.toFixed(2)}/day</span>
+                <span className={`font-mono ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>{formatCurrency(selectedAnomaly.baseline_cost, currency)}/day</span>
               </div>
               <div className={`flex justify-between py-1 border-b ${isDark ? 'border-slate-800' : 'border-slate-100'}`}>
                 <span className={isDark ? 'text-slate-400' : 'text-slate-500'}>Current Cost:</span>
-                <span className="font-mono font-bold text-rose-600 dark:text-red-400">${selectedAnomaly.current_cost.toFixed(2)}/day</span>
+                <span className="font-mono font-bold text-rose-600 dark:text-red-400">{formatCurrency(selectedAnomaly.current_cost, currency)}/day</span>
+              </div>
+              <div className={`flex justify-between py-1 border-b ${isDark ? 'border-slate-800' : 'border-slate-100'}`}>
+                <span className={isDark ? 'text-slate-400' : 'text-slate-500'}>Daily Deviation:</span>
+                <span className="font-mono font-bold text-rose-600 dark:text-red-400">+{formatCurrency(selectedAnomaly.deviation_amount, currency)}/day</span>
               </div>
               <div className="flex justify-between py-1">
-                <span className={isDark ? 'text-slate-400' : 'text-slate-500'}>Deviation Amount:</span>
-                <span className="font-mono font-bold text-rose-600 dark:text-red-400">+${selectedAnomaly.deviation_amount.toFixed(2)}/day</span>
+                <span className={isDark ? 'text-slate-400' : 'text-slate-500'}>Annualized Anomaly Impact:</span>
+                <span className="font-mono font-bold text-amber-600 dark:text-amber-400">+{formatCurrency(selectedAnomaly.deviation_amount * 365, currency)}/yr</span>
               </div>
             </div>
 

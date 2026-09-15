@@ -59,9 +59,15 @@ REACT + TYPESCRIPT WEB APPLICATION (9 Interactive Pages)
 
 ---
 
-## 8 Synthetic Scenarios Built-In
+## Synthetic Benchmark Dataset & IAM Assumptions
 
-CostGuard-X includes realistic multi-month synthetic datasets embedding 8 specific test scenarios:
+> [!IMPORTANT]  
+> **Synthetic AWS Benchmark Dataset**: CostGuard-X is evaluated on a synthetic benchmark dataset comprising **42 AWS resources across 8 realistic FinOps scenarios**, generated to mirror AWS Cost & Usage Reports (CUR) and CloudWatch metrics without exposing real company telemetry.  
+> **Read-Only Advisory Mode**: CostGuard-X operates strictly with **Read-Only IAM role permissions** (`arn:aws:iam::aws:policy/ReadOnlyAccess`). It performs zero destructive actions and serves purely as an advisory analytics engine.
+
+### 8 Synthetic Scenarios Built-In
+
+CostGuard-X benchmark dataset contains 42 resources embedding 8 specific test scenarios:
 
 1. **Idle Resource**: `i-0dev123456789a` (EC2 dev instance running 24h continuous with 3–6% CPU, $14.50/day).
 2. **Over-provisioned Resource**: `db-overprov-prod01` (RDS `db.r5.2xlarge` instance costing $48/day with 12% CPU and 18% RAM).
@@ -220,8 +226,31 @@ H:\CostXGuard\
 │   │   └── App.tsx
 ├── infrastructure/
 │   └── terraform/         # Serverless AWS deployment scripts (S3, Lambda, API Gateway, Amplify, IAM)
-├── tests/                 # Pytest automated test suite (12 passing tests)
+├── tests/                 # Pytest automated test suite (17 passing unit tests)
 └── scripts/               # Data generation & setup scripts
+```
+
+---
+
+## Local Setup, Run & Verification Commands
+
+### 1. Run Backend Unit Tests
+```bash
+# Run 17 unit tests covering MAD Z-Score, Pydantic range bounds, currency rates, and locales
+python -m pytest
+```
+
+### 2. Run Backend Fast API Application locally
+```bash
+python -m uvicorn backend.app.main:app --reload --port 8000
+```
+
+### 3. Build & Run Frontend Application
+```bash
+cd frontend
+npm install
+npm run build
+npm run dev
 ```
 
 ---

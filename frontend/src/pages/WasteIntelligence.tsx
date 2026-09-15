@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { WasteCase } from '../types';
 import { Flame, ArrowRight, HelpCircle } from 'lucide-react';
 
-import type { CurrencyCode } from '../utils/currency';
+import { formatCurrency, type CurrencyCode } from '../utils/currency';
 import type { Language } from '../utils/i18n';
 
 interface WasteIntelligenceProps {
@@ -16,7 +16,7 @@ interface WasteIntelligenceProps {
 export const WasteIntelligencePage: React.FC<WasteIntelligenceProps> = ({
   wasteCases,
   onSelectResource,
-  currency: _currency = 'USD',
+  currency = 'USD',
   language: _language = 'en',
   theme = 'light'
 }) => {
@@ -134,8 +134,11 @@ export const WasteIntelligencePage: React.FC<WasteIntelligenceProps> = ({
               } p-3 rounded-lg border flex items-center justify-between`}>
                 <div>
                   <div className={`text-[10px] uppercase font-semibold ${isDark ? 'text-slate-400' : 'text-emerald-800'}`}>Est. Avoidable Spend</div>
-                  <div className="text-base font-extrabold text-emerald-700 dark:text-emerald-400">
-                    ${item.counterfactual.potential_avoidable_monthly}/mo
+                  <div className="text-sm font-extrabold text-emerald-700 dark:text-emerald-400">
+                    {formatCurrency(item.counterfactual.potential_avoidable_monthly, currency)}/mo
+                  </div>
+                  <div className={`text-[10px] font-semibold ${isDark ? 'text-emerald-300/80' : 'text-emerald-800'}`}>
+                    ({formatCurrency(item.counterfactual.potential_avoidable_monthly * 12, currency)}/yr)
                   </div>
                 </div>
                 <button

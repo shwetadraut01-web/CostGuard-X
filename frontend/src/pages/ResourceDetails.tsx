@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { api } from '../services/api';
 import { HardDrive, ShieldAlert, ArrowLeft, Clock } from 'lucide-react';
-
-import type { CurrencyCode } from '../utils/currency';
+import { formatCurrency, type CurrencyCode } from '../utils/currency';
 import type { Language } from '../utils/i18n';
 
 interface ResourceDetailsProps {
@@ -16,7 +15,7 @@ interface ResourceDetailsProps {
 export const ResourceDetailsPage: React.FC<ResourceDetailsProps> = ({
   resourceId,
   onBack,
-  currency: _currency = 'USD',
+  currency = 'USD',
   language: _language = 'en',
   theme = 'light'
 }) => {
@@ -123,22 +122,26 @@ export const ResourceDetailsPage: React.FC<ResourceDetailsProps> = ({
             <span>Counterfactual Avoidable Cost Estimation</span>
           </h3>
           <p className="text-xs text-slate-200">{waste.counterfactual.scenario_description}</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs pt-2">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-xs pt-2">
             <div>
               <span className="text-slate-400 block text-[10px] uppercase">Current Monthly</span>
-              <span className="font-bold text-slate-200 text-sm">${waste.counterfactual.current_monthly_cost}</span>
+              <span className="font-bold text-slate-200 text-sm">{formatCurrency(waste.counterfactual.current_monthly_cost, currency)}</span>
             </div>
             <div>
               <span className="text-slate-400 block text-[10px] uppercase">Counterfactual Monthly</span>
-              <span className="font-bold text-indigo-300 text-sm">${waste.counterfactual.counterfactual_monthly_cost}</span>
+              <span className="font-bold text-indigo-300 text-sm">{formatCurrency(waste.counterfactual.counterfactual_monthly_cost, currency)}</span>
             </div>
             <div>
               <span className="text-slate-400 block text-[10px] uppercase">Avoidable Monthly</span>
-              <span className="font-bold text-emerald-400 text-sm">${waste.counterfactual.potential_avoidable_monthly}</span>
+              <span className="font-bold text-emerald-400 text-sm">{formatCurrency(waste.counterfactual.potential_avoidable_monthly, currency)}</span>
+            </div>
+            <div>
+              <span className="text-slate-400 block text-[10px] uppercase">Avoidable Annualized</span>
+              <span className="font-bold text-emerald-400 text-sm">{formatCurrency(waste.counterfactual.potential_avoidable_monthly * 12, currency)}</span>
             </div>
             <div>
               <span className="text-slate-400 block text-[10px] uppercase">Savings %</span>
-              <span className="font-bold text-emerald-400 text-sm">${waste.counterfactual.percentage_savings}%</span>
+              <span className="font-bold text-emerald-400 text-sm">{waste.counterfactual.percentage_savings}%</span>
             </div>
           </div>
         </div>

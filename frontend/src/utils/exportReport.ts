@@ -92,8 +92,8 @@ export function exportToPdf(_wasteCases: WasteCase[], kpis: SummaryKPIs | null, 
             <div class="subtitle">Generated on ${new Date().toLocaleDateString()} | Deterministic Statistical Analysis Engine</div>
           </div>
           <div>
-            <span class="badge">SOC2 Compliant</span>
-            <span class="badge">Invoice Ready</span>
+            <span class="badge">IAM Read-Only</span>
+            <span class="badge">Audited Rule Engine</span>
           </div>
         </div>
 

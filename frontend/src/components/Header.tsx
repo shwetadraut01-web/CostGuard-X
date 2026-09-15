@@ -74,7 +74,7 @@ export const Header: React.FC<HeaderProps> = ({
         <span className="text-gray-300">|</span>
         <span className="flex items-center space-x-1 text-[#4B5563] font-bold">
           <Lock className="h-3.5 w-3.5 text-[#4B5563]" />
-          <span>{isJP ? 'SOC2準拠' : 'SOC2 Compliant'}</span>
+          <span>{isJP ? 'IAM 読み取り専用' : 'IAM Read-Only'}</span>
         </span>
       </div>
 

@@ -208,7 +208,7 @@ export const AIExplanationPage: React.FC<AIExplanationProps> = ({ wasteCases = [
             <div className="bg-[#E6F0FF] border border-[#BEDBFF] p-3 rounded-lg text-[11px] space-y-1 text-[#0A66C2]">
               <div className="font-bold flex items-center space-x-1.5">
                 <ShieldAlert className="h-4 w-4" />
-                <span>Grounding Guarantee (100% Financial Accuracy):</span>
+                <span>Grounding Guarantee (Audited Rule Metrics):</span>
               </div>
               <p className="text-[#374151]">
                 The AI explanation engine receives ONLY pre-calculated mathematical facts. The LLM is prohibited from calculating or hallucinating cost numbers, confidence scores, or resource metrics.
