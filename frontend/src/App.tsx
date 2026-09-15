@@ -16,8 +16,20 @@ import { AIExplanationPage } from './pages/AIExplanation';
 import { MethodologyPage } from './pages/Methodology';
 import { JapaneseB2BPage } from './pages/JapaneseB2BPage';
 
+const getInitialTab = () => {
+  if (typeof window !== 'undefined') {
+    const path = window.location.pathname.toLowerCase();
+    const hash = window.location.hash.toLowerCase();
+    const search = window.location.search.toLowerCase();
+    if (path === '/jp' || path === '/jp/' || hash === '#/jp' || search.includes('view=jp') || search.includes('lang=ja')) {
+      return 'jp';
+    }
+  }
+  return 'overview';
+};
+
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>('overview');
+  const [activeTab, setActiveTab] = useState<string>(getInitialTab);
   const [selectedResourceId, setSelectedResourceId] = useState<string | null>(null);
 
   // Global Enterprise State
@@ -70,7 +82,26 @@ export const App: React.FC = () => {
       setSelectedResourceId(resourceId);
     }
     setActiveTab(tab);
+    if (typeof window !== 'undefined' && window.history) {
+      const targetPath = tab === 'jp' ? '/jp' : '/';
+      window.history.pushState({}, '', targetPath);
+    }
   };
+
+  // Dedicated Full-Screen Standalone Japanese Enterprise B2B Dashboard
+  if (activeTab === 'jp') {
+    return (
+      <div className="min-h-screen bg-[#F8FAFC]">
+        <JapaneseB2BPage
+          kpis={kpis}
+          wasteCases={wasteCases}
+          onNavigate={handleNavigate}
+          currency={currency}
+          language={language}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={`min-h-screen ${
@@ -91,19 +122,20 @@ export const App: React.FC = () => {
         onDateRangeChange={setDateRange}
         theme={theme}
         onThemeChange={setTheme}
+        onNavigate={handleNavigate}
       />
 
       <div className="flex flex-1">
         <Sidebar
           activeTab={activeTab}
-          setActiveTab={setActiveTab}
+          setActiveTab={handleNavigate}
           anomaliesCount={kpis?.total_anomalies}
           wasteCount={kpis?.total_waste_cases}
           language={language}
           theme={theme}
         />
 
-        <main className={`flex-1 overflow-y-auto ${activeTab === 'jp' ? 'p-0 max-w-none' : 'p-6 max-w-7xl'}`}>
+        <main className="flex-1 p-6 overflow-y-auto max-w-7xl">
           {activeTab === 'overview' && (
             <OverviewPage
               kpis={kpis}
@@ -175,16 +207,6 @@ export const App: React.FC = () => {
           {activeTab === 'ai-explanation' && <AIExplanationPage wasteCases={wasteCases} language={language} theme={theme} />}
 
           {activeTab === 'methodology' && <MethodologyPage language={language} theme={theme} />}
-
-          {activeTab === 'jp' && (
-            <JapaneseB2BPage
-              kpis={kpis}
-              wasteCases={wasteCases}
-              onNavigate={handleNavigate}
-              currency={currency}
-              language={language}
-            />
-          )}
         </main>
       </div>
     </div>

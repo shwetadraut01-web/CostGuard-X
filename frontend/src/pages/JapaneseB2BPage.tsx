@@ -205,6 +205,14 @@ export const JapaneseB2BPage: React.FC<JapaneseB2BPageProps> = ({
             <Download className="h-3.5 w-3.5" />
             <span>レポート出力</span>
           </button>
+
+          <button
+            onClick={() => onNavigate('overview')}
+            className="bg-white hover:bg-gray-50 text-[#374151] font-semibold text-xs px-3 py-1.5 rounded-md border border-[#D1D5DB] transition flex items-center space-x-1"
+            title="標準画面に戻る"
+          >
+            <span>🌐 標準画面</span>
+          </button>
         </div>
       </header>
 

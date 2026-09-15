@@ -19,6 +19,7 @@ interface HeaderProps {
   onDateRangeChange: (range: string) => void;
   theme?: 'light' | 'dark';
   onThemeChange?: (theme: 'light' | 'dark') => void;
+  onNavigate?: (tab: string) => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -36,6 +37,7 @@ export const Header: React.FC<HeaderProps> = ({
   onDateRangeChange,
   theme = 'light',
   onThemeChange,
+  onNavigate,
 }) => {
   const t = (key: string) => getTranslation(language, key);
   const isDark = theme === 'dark';
@@ -191,6 +193,16 @@ export const Header: React.FC<HeaderProps> = ({
             日本語
           </button>
         </div>
+
+        {/* Direct Japanese B2B View Switcher */}
+        {onNavigate && (
+          <button
+            onClick={() => onNavigate('jp')}
+            className="flex items-center space-x-1.5 bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold text-xs px-3.5 py-1.5 rounded-lg shadow-xs transition"
+          >
+            <span>🇯🇵 日本B2B画面</span>
+          </button>
+        )}
 
         {/* Action Button */}
         {onRefresh && (
