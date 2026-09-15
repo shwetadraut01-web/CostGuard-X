@@ -1,7 +1,8 @@
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-success?style=for-the-badge&logo=vercel)](https://costguard-4ena9pdmg-bliss-29e5.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-success?style=for-the-badge&logo=vercel)](https://costguard-x.vercel.app)
 [![AWS API](https://img.shields.io/badge/AWS%20Lambda-Live%20API-orange?style=for-the-badge&logo=amazon-aws)](https://7sgrmvn3yof5kqslf73zfvr3ai0dlrep.lambda-url.us-east-1.on.aws/api/summary)
 
-> 🚀 **LIVE DEMO**: [https://costguard-4ena9pdmg-bliss-29e5.vercel.app](https://costguard-4ena9pdmg-bliss-29e5.vercel.app)  
+> 🚀 **LIVE DEMO**: [https://costguard-x.vercel.app](https://costguard-x.vercel.app)  
+> 🔗 **ALTERNATIVE FRONTEND DEMO**: [https://frontend-six-ochre-46.vercel.app](https://frontend-six-ochre-46.vercel.app)  
 > ⚡ **LIVE AWS BACKEND API**: [https://7sgrmvn3yof5kqslf73zfvr3ai0dlrep.lambda-url.us-east-1.on.aws/api/summary](https://7sgrmvn3yof5kqslf73zfvr3ai0dlrep.lambda-url.us-east-1.on.aws/api/summary)
 
 ---
