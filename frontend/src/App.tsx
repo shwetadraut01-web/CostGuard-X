@@ -19,13 +19,14 @@ import { JapaneseB2BPage } from './pages/JapaneseB2BPage';
 const getInitialTab = () => {
   if (typeof window !== 'undefined') {
     const path = window.location.pathname.toLowerCase();
-    const hash = window.location.hash.toLowerCase();
-    const search = window.location.search.toLowerCase();
-    if (path === '/jp' || path === '/jp/' || hash === '#/jp' || search.includes('view=jp') || search.includes('lang=ja')) {
-      return 'jp';
-    }
+    if (path.includes('overview')) return 'overview';
+    if (path.includes('dashboard')) return 'dashboard';
+    if (path.includes('explorer')) return 'explorer';
+    if (path.includes('anomalies')) return 'anomalies';
+    if (path.includes('waste')) return 'waste';
   }
-  return 'overview';
+  // Primary default web application landing page is Japanese B2B pleasant light theme
+  return 'jp';
 };
 
 export const App: React.FC = () => {
@@ -34,8 +35,8 @@ export const App: React.FC = () => {
 
   // Global Enterprise State
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [language, setLanguage] = useState<Language>('en');
-  const [currency, setCurrency] = useState<CurrencyCode>('USD');
+  const [language, setLanguage] = useState<Language>('ja');
+  const [currency, setCurrency] = useState<CurrencyCode>('JPY');
   const [account, setAccount] = useState<string>('all');
   const [region, setRegion] = useState<string>('all');
   const [dateRange, setDateRange] = useState<string>('30d');
