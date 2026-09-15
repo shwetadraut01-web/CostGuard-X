@@ -10,14 +10,17 @@ interface WasteIntelligenceProps {
   onSelectResource: (resourceId: string) => void;
   currency?: CurrencyCode;
   language?: Language;
+  theme?: 'light' | 'dark';
 }
 
 export const WasteIntelligencePage: React.FC<WasteIntelligenceProps> = ({
   wasteCases,
   onSelectResource,
   currency: _currency = 'USD',
-  language: _language = 'en'
+  language: _language = 'en',
+  theme = 'light'
 }) => {
+  const isDark = theme === 'dark';
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
 
   const filteredCases = wasteCases.filter(w => {
@@ -38,13 +41,15 @@ export const WasteIntelligencePage: React.FC<WasteIntelligenceProps> = ({
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-white tracking-tight">Waste Intelligence & Fingerprinting</h2>
-        <p className="text-xs text-slate-400">
+        <h2 className={`text-xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
+          Waste Intelligence & Fingerprinting
+        </h2>
+        <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
           Rule-based explainable waste categories, transparent 0-100 confidence matrix, and safety-aware advisory recommendations.
         </p>
       </div>
 
-      <div className="flex items-center space-x-2 overflow-x-auto pb-2 border-b border-slate-800">
+      <div className={`flex items-center space-x-2 overflow-x-auto pb-2 border-b ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
         {categories.map((cat) => (
           <button
             key={cat}
@@ -52,8 +57,8 @@ export const WasteIntelligencePage: React.FC<WasteIntelligenceProps> = ({
             className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap transition ${
               selectedCategory === cat
                 ? 'bg-blue-600 text-white shadow'
-                : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-200'
-            }`}
+                : (isDark ? 'bg-slate-900 border-slate-800 text-slate-400 hover:text-slate-200' : 'bg-white border-slate-200 text-slate-600 hover:text-slate-900 shadow-xs')
+            } border`}
           >
             {cat}
           </button>
@@ -64,66 +69,78 @@ export const WasteIntelligencePage: React.FC<WasteIntelligenceProps> = ({
         {filteredCases.map((item) => (
           <div
             key={item.resource_id}
-            className="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-sm space-y-4 hover:border-slate-700 transition"
+            className={`${
+              isDark ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-sm hover:shadow'
+            } border rounded-xl p-5 space-y-4 transition`}
           >
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div className="space-y-1">
                 <div className="flex items-center space-x-3">
-                  <span className="font-mono text-sm font-bold text-blue-300">{item.resource_id}</span>
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-bold bg-red-500/10 text-red-400 border border-red-500/20 flex items-center space-x-1">
+                  <span className={`font-mono text-sm font-bold ${isDark ? 'text-blue-300' : 'text-blue-700'}`}>{item.resource_id}</span>
+                  <span className={`px-2.5 py-0.5 rounded-full text-xs font-bold flex items-center space-x-1 ${
+                    isDark ? 'bg-red-500/10 text-red-400 border border-red-500/20' : 'bg-rose-50 text-rose-800 border border-rose-200'
+                  }`}>
                     <Flame className="h-3.5 w-3.5" />
                     <span>{item.category}</span>
                   </span>
-                  <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 text-slate-300 border border-slate-700">
+                  <span className={`px-2 py-0.5 rounded text-[10px] font-semibold ${
+                    isDark ? 'bg-slate-800 text-slate-300 border-slate-700' : 'bg-slate-100 text-slate-700 border-slate-300'
+                  } border`}>
                     {item.environment.toUpperCase()}
                   </span>
                 </div>
-                <div className="text-xs text-slate-400">
-                  Service: <span className="text-slate-200 font-semibold">{item.service} ({item.instance_type})</span> | App: <span className="text-slate-200 font-semibold">{item.application}</span>
+                <div className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+                  Service: <span className={`font-semibold ${isDark ? 'text-slate-200' : 'text-slate-900'}`}>{item.service} ({item.instance_type})</span> | App: <span className={`font-semibold ${isDark ? 'text-slate-200' : 'text-slate-900'}`}>{item.application}</span>
                 </div>
               </div>
 
-              <div className="bg-slate-800/80 border border-slate-700 px-4 py-2 rounded-xl text-right">
-                <div className="text-[10px] text-slate-400 uppercase font-semibold">Waste Confidence</div>
-                <div className="text-lg font-black text-amber-400">
-                  {item.confidence.score}/100 <span className="text-xs font-normal text-slate-400">({item.confidence.confidence_level})</span>
+              <div className={`${
+                isDark ? 'bg-slate-800/80 border-slate-700' : 'bg-amber-50/60 border-amber-200'
+              } border px-4 py-2 rounded-xl text-right`}>
+                <div className={`text-[10px] uppercase font-semibold ${isDark ? 'text-slate-400' : 'text-amber-800'}`}>Waste Confidence</div>
+                <div className="text-lg font-black text-amber-600 dark:text-amber-400">
+                  {item.confidence.score}/100 <span className={`text-xs font-normal ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>({item.confidence.confidence_level})</span>
                 </div>
               </div>
             </div>
 
-            <div className="bg-slate-800/40 rounded-lg p-3.5 border border-slate-700/50 space-y-2">
-              <div className="text-xs font-semibold text-slate-300 flex items-center space-x-1.5">
-                <HelpCircle className="h-3.5 w-3.5 text-blue-400" />
+            <div className={`${
+              isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-slate-50 border-slate-200'
+            } rounded-lg p-3.5 border space-y-2`}>
+              <div className={`text-xs font-semibold flex items-center space-x-1.5 ${isDark ? 'text-slate-300' : 'text-slate-800'}`}>
+                <HelpCircle className="h-3.5 w-3.5 text-blue-500" />
                 <span>Analytical Evidence & Justification:</span>
               </div>
-              <ul className="space-y-1 text-xs text-slate-300 pl-5 list-disc">
+              <ul className={`space-y-1 text-xs pl-5 list-disc ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>
                 {item.recommendation.evidence.map((ev, i) => (
                   <li key={i}>{ev}</li>
                 ))}
               </ul>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 border-t border-slate-800">
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 pt-2 border-t ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
               <div className="md:col-span-2 space-y-1">
-                <div className="text-[10px] text-slate-400 uppercase font-semibold">Primary Advisory Action</div>
-                <p className="text-xs text-emerald-300 font-semibold">
+                <div className={`text-[10px] uppercase font-semibold ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>Primary Advisory Action</div>
+                <p className="text-xs text-emerald-700 dark:text-emerald-300 font-semibold">
                   {item.recommendation.primary_recommendation}
                 </p>
-                <p className="text-[11px] text-slate-500 italic">
+                <p className={`text-[11px] italic ${isDark ? 'text-slate-500' : 'text-slate-500'}`}>
                   {item.recommendation.advisory_notice}
                 </p>
               </div>
 
-              <div className="bg-slate-800/60 p-3 rounded-lg border border-slate-700/60 flex items-center justify-between">
+              <div className={`${
+                isDark ? 'bg-slate-800/60 border-slate-700/60' : 'bg-emerald-50/50 border-emerald-200'
+              } p-3 rounded-lg border flex items-center justify-between`}>
                 <div>
-                  <div className="text-[10px] text-slate-400 uppercase font-semibold">Est. Avoidable Spend</div>
-                  <div className="text-base font-extrabold text-emerald-400">
+                  <div className={`text-[10px] uppercase font-semibold ${isDark ? 'text-slate-400' : 'text-emerald-800'}`}>Est. Avoidable Spend</div>
+                  <div className="text-base font-extrabold text-emerald-700 dark:text-emerald-400">
                     ${item.counterfactual.potential_avoidable_monthly}/mo
                   </div>
                 </div>
                 <button
                   onClick={() => onSelectResource(item.resource_id)}
-                  className="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-3 py-2 rounded-lg transition flex items-center space-x-1"
+                  className="bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-3 py-2 rounded-lg transition flex items-center space-x-1 shadow-xs"
                 >
                   <span>Investigate</span>
                   <ArrowRight className="h-3.5 w-3.5" />

@@ -8,9 +8,11 @@ import type { Language } from '../utils/i18n';
 interface AIExplanationProps {
   wasteCases: WasteCase[];
   language?: Language;
+  theme?: 'light' | 'dark';
 }
 
-export const AIExplanationPage: React.FC<AIExplanationProps> = ({ wasteCases, language: _language = 'en' }) => {
+export const AIExplanationPage: React.FC<AIExplanationProps> = ({ wasteCases, language: _language = 'en', theme = 'light' }) => {
+  const isDark = theme === 'dark';
   const [selectedCase, setSelectedCase] = useState<WasteCase | null>(wasteCases[0] || null);
   const [explanationResult, setExplanationResult] = useState<any>(selectedCase?.ai_explanation || null);
   const [loading, setLoading] = useState<boolean>(false);
@@ -41,14 +43,18 @@ export const AIExplanationPage: React.FC<AIExplanationProps> = ({ wasteCases, la
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-xl font-bold text-white tracking-tight">AI & Deterministic Explanation Layer</h2>
-        <p className="text-xs text-slate-400">
+        <h2 className={`text-xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
+          AI & Deterministic Explanation Layer
+        </h2>
+        <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
           Translates structured analytical findings into business explanations using Amazon Bedrock or deterministic template fallback.
         </p>
       </div>
 
-      <div className="bg-slate-900 border border-slate-800 rounded-xl p-4 flex items-center justify-between">
-        <label className="text-xs font-semibold text-slate-300">Select Waste Case to Explain:</label>
+      <div className={`${
+        isDark ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+      } border rounded-xl p-4 flex items-center justify-between`}>
+        <label className={`text-xs font-semibold ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>Select Waste Case to Explain:</label>
         <div className="flex space-x-2">
           {wasteCases.filter(w => w.is_waste).map((w) => (
             <button
@@ -57,7 +63,7 @@ export const AIExplanationPage: React.FC<AIExplanationProps> = ({ wasteCases, la
               className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
                 selectedCase?.resource_id === w.resource_id
                   ? 'bg-blue-600 text-white shadow'
-                  : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+                  : (isDark ? 'bg-slate-800 text-slate-400 hover:bg-slate-700' : 'bg-slate-100 text-slate-600 hover:bg-slate-200')
               }`}
             >
               {w.resource_id} ({w.category})
@@ -68,52 +74,62 @@ export const AIExplanationPage: React.FC<AIExplanationProps> = ({ wasteCases, la
 
       {selectedCase && (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4 shadow-sm flex flex-col justify-between">
+          <div className={`${
+            isDark ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+          } border rounded-xl p-5 space-y-4 flex flex-col justify-between`}>
             <div className="space-y-3">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
+              <div className={`flex items-center justify-between border-b pb-3 ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
                 <div className="flex items-center space-x-2">
-                  <Sparkles className="h-5 w-5 text-indigo-400" />
-                  <h3 className="text-sm font-bold text-white">Generated Business Explanation</h3>
+                  <Sparkles className="h-5 w-5 text-indigo-500" />
+                  <h3 className={`text-sm font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>Generated Business Explanation</h3>
                 </div>
                 {explanationResult && (
                   <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${
                     explanationResult.source.includes('Bedrock')
-                      ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
-                      : 'bg-indigo-500/10 text-indigo-300 border border-indigo-500/20'
+                      ? (isDark ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-emerald-50 text-emerald-800 border border-emerald-200')
+                      : (isDark ? 'bg-indigo-500/10 text-indigo-300 border border-indigo-500/20' : 'bg-indigo-50 text-indigo-800 border border-indigo-200')
                   }`}>
                     {explanationResult.source}
                   </span>
                 )}
               </div>
 
-              <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4 min-h-[160px] flex items-center justify-center">
+              <div className={`${
+                isDark ? 'bg-slate-800/60 border-slate-700/60' : 'bg-slate-50 border-slate-200'
+              } border rounded-xl p-4 min-h-[160px] flex items-center justify-center`}>
                 {loading ? (
                   <div className="text-slate-400 text-xs animate-pulse flex items-center space-x-2">
-                    <Send className="h-4 w-4 animate-spin text-blue-400" />
+                    <Send className="h-4 w-4 animate-spin text-blue-500" />
                     <span>Generating business language explanation...</span>
                   </div>
                 ) : (
-                  <p className="text-xs text-slate-200 leading-relaxed font-normal">
+                  <p className={`text-xs leading-relaxed font-normal ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>
                     {explanationResult?.explanation || "Select a resource above to generate an explanation."}
                   </p>
                 )}
               </div>
             </div>
 
-            <div className="bg-slate-800/40 p-3 rounded-lg border border-slate-700/50 text-[11px] text-slate-400 space-y-1">
-              <div className="font-semibold text-slate-300">Grounding Guarantee:</div>
+            <div className={`${
+              isDark ? 'bg-slate-800/40 border-slate-700/50 text-slate-400' : 'bg-slate-50 border-slate-200 text-slate-600'
+            } p-3 rounded-lg border text-[11px] space-y-1`}>
+              <div className={`font-semibold ${isDark ? 'text-slate-300' : 'text-slate-800'}`}>Grounding Guarantee:</div>
               <p>
                 The explanation engine receives ONLY pre-calculated structured data. The LLM is prohibited from hallucinating cost numbers, metrics, or resources.
               </p>
             </div>
           </div>
 
-          <div className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3 shadow-sm">
-            <div className="flex items-center space-x-2 border-b border-slate-800 pb-3">
-              <Code2 className="h-5 w-5 text-blue-400" />
-              <h3 className="text-sm font-bold text-white">Structured Data Input (Passed to Explainer)</h3>
+          <div className={`${
+            isDark ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+          } border rounded-xl p-5 space-y-3`}>
+            <div className={`flex items-center space-x-2 border-b pb-3 ${isDark ? 'border-slate-800' : 'border-slate-200'}`}>
+              <Code2 className="h-5 w-5 text-blue-500" />
+              <h3 className={`text-sm font-bold ${isDark ? 'text-white' : 'text-slate-900'}`}>Structured Data Input (Passed to Explainer)</h3>
             </div>
-            <pre className="bg-slate-950 text-blue-300 text-[11px] font-mono p-4 rounded-xl border border-slate-800 overflow-x-auto max-h-[300px]">
+            <pre className={`${
+              isDark ? 'bg-slate-950 text-blue-300 border-slate-800' : 'bg-slate-900 text-blue-300 border-slate-800'
+            } text-[11px] font-mono p-4 rounded-xl border overflow-x-auto max-h-[300px]`}>
               {JSON.stringify(explanationResult?.structured_data || {
                 resource_id: selectedCase.resource_id,
                 service: selectedCase.service,

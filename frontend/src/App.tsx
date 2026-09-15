@@ -20,6 +20,7 @@ export const App: React.FC = () => {
   const [selectedResourceId, setSelectedResourceId] = useState<string | null>(null);
 
   // Global Enterprise State
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [language, setLanguage] = useState<Language>('en');
   const [currency, setCurrency] = useState<CurrencyCode>('USD');
   const [account, setAccount] = useState<string>('all');
@@ -71,7 +72,9 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
+    <div className={`min-h-screen ${
+      theme === 'dark' ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
+    } flex flex-col font-sans transition-colors duration-200`}>
       <Header
         onRefresh={loadData}
         isLoading={loading}
@@ -85,6 +88,8 @@ export const App: React.FC = () => {
         onRegionChange={setRegion}
         dateRange={dateRange}
         onDateRangeChange={setDateRange}
+        theme={theme}
+        onThemeChange={setTheme}
       />
 
       <div className="flex flex-1">
@@ -94,6 +99,7 @@ export const App: React.FC = () => {
           anomaliesCount={kpis?.total_anomalies}
           wasteCount={kpis?.total_waste_cases}
           language={language}
+          theme={theme}
         />
 
         <main className="flex-1 p-6 overflow-y-auto max-w-7xl">
@@ -104,6 +110,7 @@ export const App: React.FC = () => {
               onNavigate={handleNavigate}
               currency={currency}
               language={language}
+              theme={theme}
             />
           )}
 
@@ -116,6 +123,7 @@ export const App: React.FC = () => {
               wasteCases={wasteCases}
               currency={currency}
               language={language}
+              theme={theme}
             />
           )}
 
@@ -127,6 +135,7 @@ export const App: React.FC = () => {
               environments={environments}
               currency={currency}
               language={language}
+              theme={theme}
             />
           )}
 
@@ -136,6 +145,7 @@ export const App: React.FC = () => {
               onSelectResource={(rid) => handleNavigate('resource', rid)}
               currency={currency}
               language={language}
+              theme={theme}
             />
           )}
 
@@ -145,6 +155,7 @@ export const App: React.FC = () => {
               onSelectResource={(rid) => handleNavigate('resource', rid)}
               currency={currency}
               language={language}
+              theme={theme}
             />
           )}
 
@@ -154,14 +165,15 @@ export const App: React.FC = () => {
               onBack={() => setActiveTab('waste')}
               currency={currency}
               language={language}
+              theme={theme}
             />
           )}
 
-          {activeTab === 'simulator' && <WhatIfSimulatorPage currency={currency} language={language} />}
+          {activeTab === 'simulator' && <WhatIfSimulatorPage currency={currency} language={language} theme={theme} />}
 
-          {activeTab === 'ai-explanation' && <AIExplanationPage wasteCases={wasteCases} language={language} />}
+          {activeTab === 'ai-explanation' && <AIExplanationPage wasteCases={wasteCases} language={language} theme={theme} />}
 
-          {activeTab === 'methodology' && <MethodologyPage language={language} />}
+          {activeTab === 'methodology' && <MethodologyPage language={language} theme={theme} />}
         </main>
       </div>
     </div>

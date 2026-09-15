@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldAlert, RefreshCw, DollarSign, Calendar, Layers, MapPin } from 'lucide-react';
+import { ShieldAlert, RefreshCw, DollarSign, Calendar, Layers, MapPin, Sun, Moon } from 'lucide-react';
 import type { CurrencyCode } from '../utils/currency';
 import type { Language } from '../utils/i18n';
 import { getTranslation } from '../utils/i18n';
@@ -17,6 +17,8 @@ interface HeaderProps {
   onRegionChange: (reg: string) => void;
   dateRange: string;
   onDateRangeChange: (range: string) => void;
+  theme?: 'light' | 'dark';
+  onThemeChange?: (theme: 'light' | 'dark') => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -32,20 +34,22 @@ export const Header: React.FC<HeaderProps> = ({
   onRegionChange,
   dateRange,
   onDateRangeChange,
+  theme = 'light',
+  onThemeChange,
 }) => {
   const t = (key: string) => getTranslation(language, key);
 
   return (
-    <header className="bg-slate-900 border-b border-slate-800 text-slate-100 px-6 py-3 flex flex-wrap items-center justify-between gap-4 shadow-sm">
+    <header className="bg-slate-900 border-b border-slate-800 text-slate-100 px-6 py-3 flex flex-wrap items-center justify-between gap-4 shadow-md">
       {/* Brand & Logo */}
       <div className="flex items-center space-x-3">
-        <div className="bg-blue-600 p-2 rounded-lg text-white shadow">
+        <div className="bg-blue-600 p-2 rounded-lg text-white shadow-md">
           <ShieldAlert className="h-5 w-5" />
         </div>
         <div>
           <h1 className="text-lg font-bold tracking-tight text-white flex items-center space-x-2">
             <span>{t('header.title')}</span>
-            <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-blue-500/20 text-blue-400 border border-blue-500/30">
+            <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-400/30">
               Enterprise FinOps
             </span>
           </h1>
@@ -114,6 +118,32 @@ export const Header: React.FC<HeaderProps> = ({
             <option value="INR" className="bg-slate-900 text-slate-200">INR (₹)</option>
           </select>
         </div>
+
+        {/* Japanese Theme Mode Toggle */}
+        {onThemeChange && (
+          <div className="flex items-center bg-slate-800 border border-slate-700 rounded-lg p-0.5 text-slate-300">
+            <button
+              onClick={() => onThemeChange('light')}
+              className={`flex items-center space-x-1 px-2 py-1 rounded text-xs font-medium transition ${
+                theme === 'light' ? 'bg-blue-600 text-white shadow' : 'text-slate-400 hover:text-slate-200'
+              }`}
+              title="Japanese Corporate Light Theme"
+            >
+              <Sun className="h-3 w-3" />
+              <span>ライト (JP)</span>
+            </button>
+            <button
+              onClick={() => onThemeChange('dark')}
+              className={`flex items-center space-x-1 px-2 py-1 rounded text-xs font-medium transition ${
+                theme === 'dark' ? 'bg-blue-600 text-white shadow' : 'text-slate-400 hover:text-slate-200'
+              }`}
+              title="Dark FinOps Theme"
+            >
+              <Moon className="h-3 w-3" />
+              <span>ダーク</span>
+            </button>
+          </div>
+        )}
 
         {/* Language Toggle */}
         <div className="flex items-center bg-slate-800 border border-slate-700 rounded-lg p-0.5 text-slate-300">
