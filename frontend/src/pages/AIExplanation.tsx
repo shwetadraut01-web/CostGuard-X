@@ -3,11 +3,14 @@ import { api } from '../services/api';
 import type { WasteCase } from '../types';
 import { Sparkles, Code2, Send } from 'lucide-react';
 
+import type { Language } from '../utils/i18n';
+
 interface AIExplanationProps {
   wasteCases: WasteCase[];
+  language?: Language;
 }
 
-export const AIExplanationPage: React.FC<AIExplanationProps> = ({ wasteCases }) => {
+export const AIExplanationPage: React.FC<AIExplanationProps> = ({ wasteCases, language: _language = 'en' }) => {
   const [selectedCase, setSelectedCase] = useState<WasteCase | null>(wasteCases[0] || null);
   const [explanationResult, setExplanationResult] = useState<any>(selectedCase?.ai_explanation || null);
   const [loading, setLoading] = useState<boolean>(false);

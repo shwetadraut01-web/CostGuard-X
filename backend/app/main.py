@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 
 from backend.app.routes.api import router as api_router
+from backend.app.services.pipeline_service import PipelineService
 
 app = FastAPI(
     title="CostGuard-X API",

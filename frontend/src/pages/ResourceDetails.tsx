@@ -2,14 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { api } from '../services/api';
 import { HardDrive, ShieldAlert, ArrowLeft, Clock } from 'lucide-react';
 
+import type { CurrencyCode } from '../utils/currency';
+import type { Language } from '../utils/i18n';
+
 interface ResourceDetailsProps {
   resourceId: string;
   onBack: () => void;
+  currency?: CurrencyCode;
+  language?: Language;
 }
 
 export const ResourceDetailsPage: React.FC<ResourceDetailsProps> = ({
   resourceId,
-  onBack
+  onBack,
+  currency: _currency = 'USD',
+  language: _language = 'en'
 }) => {
   const [details, setDetails] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);

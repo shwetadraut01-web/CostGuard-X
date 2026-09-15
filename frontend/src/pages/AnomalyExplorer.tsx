@@ -2,14 +2,21 @@ import React, { useState } from 'react';
 import type { AnomalyRecord } from '../types';
 import { AlertTriangle, Filter, Eye } from 'lucide-react';
 
+import type { CurrencyCode } from '../utils/currency';
+import type { Language } from '../utils/i18n';
+
 interface AnomalyExplorerProps {
   anomalies: AnomalyRecord[];
   onSelectResource: (resourceId: string) => void;
+  currency?: CurrencyCode;
+  language?: Language;
 }
 
 export const AnomalyExplorerPage: React.FC<AnomalyExplorerProps> = ({
   anomalies,
-  onSelectResource
+  onSelectResource,
+  currency: _currency = 'USD',
+  language: _language = 'en'
 }) => {
   const [severityFilter, setSeverityFilter] = useState<string>('ALL');
   const [selectedAnomaly, setSelectedAnomaly] = useState<AnomalyRecord | null>(null);

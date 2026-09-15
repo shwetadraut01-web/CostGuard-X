@@ -1,0 +1,29 @@
+{
+  "header": {
+    "title": "CostGuard-X",
+    "subtitle": "AWSクラウドコスト削減インテリジェンスプラットフォーム (統計的分析エンジン)",
+    "account": "AWSアカウント",
+    "region": "リージョン",
+    "all_accounts": "全アカウント (本番・開発)",
+    "all_regions": "全リージョン (米国東部等)",
+    "date_range": "過去30日間",
+    "refresh": "分析の再実行",
+    "mode_live": "AWSライブ接続中",
+    "mode_synthetic": "検証用データセット"
+  },
+  "nav": {
+    "overview": "概要サマリー",
+    "dashboard": "経営ダッシュボード",
+    "explorer": "コスト分析",
+    "anomalies": "異常検知センター",
+    "waste": "無駄・削減分析",
+    "resource": "リソース詳細監査",
+    "simulator": "削減シナリオシミュレーション",
+    "ai_explanation": "エグゼクティブレポート",
+    "methodology": "分析手法と数式定義"
+  },
+  "footer": {
+    "advisory_title": "FinOps アドバイザリーモード",
+    "advisory_desc": "CostGuard-Xは読み取り専用の推奨事項を提供します。インフラの直接変更は行われません。"
+  }
+}

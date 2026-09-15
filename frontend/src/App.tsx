@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { api } from './services/api';
 import type { SummaryKPIs, ServiceCost, EnvironmentCost, DailyTrend, AnomalyRecord, WasteCase } from './types';
+import type { CurrencyCode } from './utils/currency';
+import type { Language } from './utils/i18n';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { OverviewPage } from './pages/Overview';
@@ -16,6 +18,13 @@ import { MethodologyPage } from './pages/Methodology';
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('overview');
   const [selectedResourceId, setSelectedResourceId] = useState<string | null>(null);
+
+  // Global Enterprise State
+  const [language, setLanguage] = useState<Language>('en');
+  const [currency, setCurrency] = useState<CurrencyCode>('USD');
+  const [account, setAccount] = useState<string>('all');
+  const [region, setRegion] = useState<string>('all');
+  const [dateRange, setDateRange] = useState<string>('30d');
 
   const [kpis, setKpis] = useState<SummaryKPIs | null>(null);
   const [services, setServices] = useState<ServiceCost[]>([]);
@@ -63,16 +72,28 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans">
-      <Header onRefresh={loadData} isLoading={loading} />
+      <Header
+        onRefresh={loadData}
+        isLoading={loading}
+        language={language}
+        onLanguageChange={setLanguage}
+        currency={currency}
+        onCurrencyChange={setCurrency}
+        account={account}
+        onAccountChange={setAccount}
+        region={region}
+        onRegionChange={setRegion}
+        dateRange={dateRange}
+        onDateRangeChange={setDateRange}
+      />
 
       <div className="flex flex-1">
         <Sidebar
           activeTab={activeTab}
-          setActiveTab={(tab) => {
-            setActiveTab(tab);
-          }}
+          setActiveTab={setActiveTab}
           anomaliesCount={kpis?.total_anomalies}
           wasteCount={kpis?.total_waste_cases}
+          language={language}
         />
 
         <main className="flex-1 p-6 overflow-y-auto max-w-7xl">
@@ -81,6 +102,8 @@ export const App: React.FC = () => {
               kpis={kpis}
               wasteCases={wasteCases}
               onNavigate={handleNavigate}
+              currency={currency}
+              language={language}
             />
           )}
 
@@ -91,6 +114,8 @@ export const App: React.FC = () => {
               environments={environments}
               dailyTrends={dailyTrends}
               wasteCases={wasteCases}
+              currency={currency}
+              language={language}
             />
           )}
 
@@ -100,6 +125,8 @@ export const App: React.FC = () => {
               resourceSpend={resourceSpend}
               services={services}
               environments={environments}
+              currency={currency}
+              language={language}
             />
           )}
 
@@ -107,6 +134,8 @@ export const App: React.FC = () => {
             <AnomalyExplorerPage
               anomalies={anomalies}
               onSelectResource={(rid) => handleNavigate('resource', rid)}
+              currency={currency}
+              language={language}
             />
           )}
 
@@ -114,6 +143,8 @@ export const App: React.FC = () => {
             <WasteIntelligencePage
               wasteCases={wasteCases}
               onSelectResource={(rid) => handleNavigate('resource', rid)}
+              currency={currency}
+              language={language}
             />
           )}
 
@@ -121,14 +152,16 @@ export const App: React.FC = () => {
             <ResourceDetailsPage
               resourceId={selectedResourceId || (wasteCases[0]?.resource_id || 'i-0dev123456789a')}
               onBack={() => setActiveTab('waste')}
+              currency={currency}
+              language={language}
             />
           )}
 
-          {activeTab === 'simulator' && <WhatIfSimulatorPage />}
+          {activeTab === 'simulator' && <WhatIfSimulatorPage currency={currency} language={language} />}
 
-          {activeTab === 'ai-explanation' && <AIExplanationPage wasteCases={wasteCases} />}
+          {activeTab === 'ai-explanation' && <AIExplanationPage wasteCases={wasteCases} language={language} />}
 
-          {activeTab === 'methodology' && <MethodologyPage />}
+          {activeTab === 'methodology' && <MethodologyPage language={language} />}
         </main>
       </div>
     </div>

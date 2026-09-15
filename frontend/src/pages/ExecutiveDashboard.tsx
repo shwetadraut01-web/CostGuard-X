@@ -4,12 +4,17 @@ import { MetricCard } from '../components/MetricCard';
 import { CostChart } from '../components/CostChart';
 import { DollarSign, TrendingUp, AlertTriangle, PiggyBank, Flame } from 'lucide-react';
 
+import type { CurrencyCode } from '../utils/currency';
+import type { Language } from '../utils/i18n';
+
 interface ExecDashboardProps {
   kpis: SummaryKPIs | null;
   services: ServiceCost[];
   environments: EnvironmentCost[];
   dailyTrends: DailyTrend[];
   wasteCases: WasteCase[];
+  currency?: CurrencyCode;
+  language?: Language;
 }
 
 export const ExecutiveDashboardPage: React.FC<ExecDashboardProps> = ({
@@ -17,7 +22,9 @@ export const ExecutiveDashboardPage: React.FC<ExecDashboardProps> = ({
   services,
   environments,
   dailyTrends,
-  wasteCases
+  wasteCases,
+  currency: _currency = 'USD',
+  language: _language = 'en'
 }) => {
   if (!kpis) return <div className="text-slate-400 p-6">Loading executive dashboard...</div>;
 

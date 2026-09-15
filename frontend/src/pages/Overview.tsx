@@ -11,13 +11,19 @@ import {
   ShieldCheck
 } from 'lucide-react';
 
+import type { CurrencyCode } from '../utils/currency';
+import type { Language } from '../utils/i18n';
+import { formatCurrency } from '../utils/currency';
+
 interface OverviewProps {
   kpis: SummaryKPIs | null;
   wasteCases: WasteCase[];
   onNavigate: (tab: string, resourceId?: string) => void;
+  currency?: CurrencyCode;
+  language?: Language;
 }
 
-export const OverviewPage: React.FC<OverviewProps> = ({ kpis, wasteCases, onNavigate }) => {
+export const OverviewPage: React.FC<OverviewProps> = ({ kpis, wasteCases, onNavigate, currency = 'USD' }) => {
   if (!kpis) return <div className="text-slate-400 p-6">Loading summary overview...</div>;
 
   const topHighConfWaste = wasteCases
@@ -62,14 +68,14 @@ export const OverviewPage: React.FC<OverviewProps> = ({ kpis, wasteCases, onNavi
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <MetricCard
           title="Total Cloud Spend"
-          value={`$${kpis.total_spend.toLocaleString()}`}
+          value={formatCurrency(kpis.total_spend, currency, true)}
           subtitle="60-day aggregate dataset"
           icon={DollarSign}
           color="blue"
         />
         <MetricCard
           title="Recent 7-Day Spend"
-          value={`$${kpis.recent_7d_spend.toLocaleString()}`}
+          value={formatCurrency(kpis.recent_7d_spend, currency, true)}
           subtitle="Recent 7-day period"
           icon={TrendingUp}
           trend={`${kpis.spend_pct_change_7d > 0 ? '+' : ''}${kpis.spend_pct_change_7d}%`}
@@ -85,7 +91,7 @@ export const OverviewPage: React.FC<OverviewProps> = ({ kpis, wasteCases, onNavi
         />
         <MetricCard
           title="Potential Avoidable Spend"
-          value={`$${kpis.total_avoidable_monthly_spend.toLocaleString()}/mo`}
+          value={`${formatCurrency(kpis.total_avoidable_monthly_spend, currency, true)}/mo`}
           subtitle={`Avg Waste Confidence: ${kpis.avg_waste_confidence}%`}
           icon={PiggyBank}
           color="emerald"

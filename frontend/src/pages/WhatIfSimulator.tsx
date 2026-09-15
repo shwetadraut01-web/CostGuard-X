@@ -3,7 +3,18 @@ import { api } from '../services/api';
 import type { WhatIfSimulation } from '../types';
 import { Sliders, PiggyBank, AlertCircle } from 'lucide-react';
 
-export const WhatIfSimulatorPage: React.FC = () => {
+import type { CurrencyCode } from '../utils/currency';
+import type { Language } from '../utils/i18n';
+
+interface WhatIfSimulatorProps {
+  currency?: CurrencyCode;
+  language?: Language;
+}
+
+export const WhatIfSimulatorPage: React.FC<WhatIfSimulatorProps> = ({
+  currency: _currency = 'USD',
+  language: _language = 'en'
+}) => {
   const [runtimeHours, setRuntimeHours] = useState<number>(10);
   const [downsizePct, setDownsizePct] = useState<number>(40);
   const [storagePct, setStoragePct] = useState<number>(65);

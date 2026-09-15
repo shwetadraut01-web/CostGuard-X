@@ -3,18 +3,25 @@ import type { DailyTrend, ServiceCost, EnvironmentCost } from '../types';
 import { CostChart } from '../components/CostChart';
 import { Filter, Search } from 'lucide-react';
 
+import type { CurrencyCode } from '../utils/currency';
+import type { Language } from '../utils/i18n';
+
 interface CostExplorerProps {
   dailyTrends: DailyTrend[];
   resourceSpend: any[];
   services: ServiceCost[];
   environments: EnvironmentCost[];
+  currency?: CurrencyCode;
+  language?: Language;
 }
 
 export const CostExplorerPage: React.FC<CostExplorerProps> = ({
   dailyTrends,
   resourceSpend,
   services,
-  environments
+  environments,
+  currency: _currency = 'USD',
+  language: _language = 'en'
 }) => {
   const [selectedService, setSelectedService] = useState<string>('ALL');
   const [selectedEnv, setSelectedEnv] = useState<string>('ALL');

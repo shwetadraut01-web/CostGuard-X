@@ -2,7 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { api } from '../services/api';
 import { BookOpen, CheckCircle2, ShieldCheck, Cpu, Code2 } from 'lucide-react';
 
-export const MethodologyPage: React.FC = () => {
+import type { Language } from '../utils/i18n';
+
+interface MethodologyProps {
+  language?: Language;
+}
+
+export const MethodologyPage: React.FC<MethodologyProps> = ({ language: _language = 'en' }) => {
   const [methodology, setMethodology] = useState<any>(null);
 
   useEffect(() => {

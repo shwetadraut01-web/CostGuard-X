@@ -2,14 +2,21 @@ import React, { useState } from 'react';
 import type { WasteCase } from '../types';
 import { Flame, ArrowRight, HelpCircle } from 'lucide-react';
 
+import type { CurrencyCode } from '../utils/currency';
+import type { Language } from '../utils/i18n';
+
 interface WasteIntelligenceProps {
   wasteCases: WasteCase[];
   onSelectResource: (resourceId: string) => void;
+  currency?: CurrencyCode;
+  language?: Language;
 }
 
 export const WasteIntelligencePage: React.FC<WasteIntelligenceProps> = ({
   wasteCases,
-  onSelectResource
+  onSelectResource,
+  currency: _currency = 'USD',
+  language: _language = 'en'
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
 

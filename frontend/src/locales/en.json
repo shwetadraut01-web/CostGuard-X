@@ -1,0 +1,29 @@
+{
+  "header": {
+    "title": "CostGuard-X",
+    "subtitle": "Cloud Cost Waste Intelligence Platform (No-ML Statistical Engine)",
+    "account": "AWS Account",
+    "region": "Region",
+    "all_accounts": "All Accounts (Prod & Dev)",
+    "all_regions": "All Regions (us-east-1, etc.)",
+    "date_range": "30 Days",
+    "refresh": "Refresh Analysis",
+    "mode_live": "LIVE AWS CLOUD",
+    "mode_synthetic": "SYNTHETIC BENCHMARK"
+  },
+  "nav": {
+    "overview": "Overview",
+    "dashboard": "Executive Dashboard",
+    "explorer": "Cost Explorer",
+    "anomalies": "Anomaly Center",
+    "waste": "Waste Intelligence",
+    "resource": "Resource Inspector",
+    "simulator": "Scenario Simulator",
+    "ai_explanation": "Executive Report",
+    "methodology": "Methodology & Formulas"
+  },
+  "footer": {
+    "advisory_title": "FinOps Advisory Mode",
+    "advisory_desc": "CostGuard-X provides read-only recommendations. No destructive infrastructure mutations are executed."
+  }
+}
