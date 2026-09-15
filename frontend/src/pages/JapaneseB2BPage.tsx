@@ -15,6 +15,7 @@ import type { SummaryKPIs, WasteCase } from '../types';
 import type { CurrencyCode } from '../utils/currency';
 import type { Language } from '../utils/i18n';
 import { formatCurrency } from '../utils/currency';
+import { exportToPdf, exportToCsv } from '../utils/exportReport';
 
 interface JapaneseB2BPageProps {
   kpis: SummaryKPIs | null;
@@ -216,7 +217,7 @@ export const JapaneseB2BPage: React.FC<JapaneseB2BPageProps> = ({
           </div>
 
           <button
-            onClick={() => alert(isJP ? "経営会議用PDF/CSVレポートのダウンロードを開始します。" : "Generating Executive PDF/CSV Report...")}
+            onClick={() => exportToPdf(_wasteCases, kpis, currency)}
             className="bg-[#0A66C2] hover:bg-[#084e96] text-white font-semibold text-xs px-3.5 py-1.5 rounded-md shadow-xs transition flex items-center space-x-1.5"
           >
             <Download className="h-3.5 w-3.5" />
@@ -394,7 +395,7 @@ export const JapaneseB2BPage: React.FC<JapaneseB2BPageProps> = ({
               <span className="text-[10px] text-gray-500 font-normal">({filteredRows.length} {isJP ? '件表示中' : 'shown'})</span>
             </h3>
             <span
-              onClick={() => alert("Downloading CSV dataset...")}
+              onClick={() => exportToCsv(_wasteCases)}
               className="text-[11px] text-[#0A66C2] font-semibold cursor-pointer hover:underline"
             >
               {isJP ? '全件CSVデータ出力 →' : 'Export Full CSV →'}

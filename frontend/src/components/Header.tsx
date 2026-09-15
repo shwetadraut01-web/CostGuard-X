@@ -129,11 +129,16 @@ export const Header: React.FC<HeaderProps> = ({
           <select
             value={currency}
             onChange={(e) => onCurrencyChange(e.target.value as CurrencyCode)}
-            className="bg-transparent outline-none cursor-pointer text-xs font-medium text-[#111827]"
+            className="bg-transparent outline-none cursor-pointer text-xs font-semibold text-[#111827]"
           >
-            <option value="USD" className="bg-white text-[#111827]">USD ($)</option>
-            <option value="JPY" className="bg-white text-[#111827]">JPY (¥)</option>
-            <option value="EUR" className="bg-white text-[#111827]">EUR (€)</option>
+            <option value="USD" className="bg-white text-[#111827]">USD ($ US Dollar)</option>
+            <option value="INR" className="bg-white text-[#111827]">INR (₹ Indian Rupee)</option>
+            <option value="EUR" className="bg-white text-[#111827]">EUR (€ Euro)</option>
+            <option value="GBP" className="bg-white text-[#111827]">GBP (£ British Pound)</option>
+            <option value="JPY" className="bg-white text-[#111827]">JPY (¥ Japanese Yen)</option>
+            <option value="AUD" className="bg-white text-[#111827]">AUD (A$ Australian Dollar)</option>
+            <option value="SGD" className="bg-white text-[#111827]">SGD (S$ Singapore Dollar)</option>
+            <option value="CAD" className="bg-white text-[#111827]">CAD (C$ Canadian Dollar)</option>
           </select>
         </div>
 
