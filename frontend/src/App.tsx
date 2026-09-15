@@ -34,8 +34,8 @@ export const App: React.FC = () => {
 
   // Global Enterprise State (Default Pleasant Japanese Light Theme)
   const theme = 'light';
-  const [language, setLanguage] = useState<Language>('ja');
-  const [currency, setCurrency] = useState<CurrencyCode>('JPY');
+  const [language, setLanguage] = useState<Language>('en');
+  const [currency, setCurrency] = useState<CurrencyCode>('USD');
   const [account, setAccount] = useState<string>('all');
   const [region, setRegion] = useState<string>('all');
   const [dateRange, setDateRange] = useState<string>('30d');
