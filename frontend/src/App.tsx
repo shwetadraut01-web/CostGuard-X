@@ -5,7 +5,6 @@ import type { CurrencyCode } from './utils/currency';
 import type { Language } from './utils/i18n';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
-import { OverviewPage } from './pages/Overview';
 import { ExecutiveDashboardPage } from './pages/ExecutiveDashboard';
 import { CostExplorerPage } from './pages/CostExplorer';
 import { AnomalyExplorerPage } from './pages/AnomalyExplorer';
@@ -33,8 +32,8 @@ export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>(getInitialTab);
   const [selectedResourceId, setSelectedResourceId] = useState<string | null>(null);
 
-  // Global Enterprise State
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  // Global Enterprise State (Default Pleasant Japanese Light Theme)
+  const theme = 'light';
   const [language, setLanguage] = useState<Language>('ja');
   const [currency, setCurrency] = useState<CurrencyCode>('JPY');
   const [account, setAccount] = useState<string>('all');
@@ -90,7 +89,7 @@ export const App: React.FC = () => {
   };
 
   // Dedicated Full-Screen Standalone Japanese Enterprise B2B Dashboard
-  if (activeTab === 'jp') {
+  if (activeTab === 'jp' || activeTab === 'overview') {
     return (
       <div className="min-h-screen bg-[#F8FAFC]">
         <JapaneseB2BPage
@@ -105,9 +104,7 @@ export const App: React.FC = () => {
   }
 
   return (
-    <div className={`min-h-screen ${
-      theme === 'dark' ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
-    } flex flex-col font-sans transition-colors duration-200`}>
+    <div className="min-h-screen bg-[#F8FAFC] text-[#111827] flex flex-col font-['Noto_Sans_JP','Inter',sans-serif] transition-colors duration-200">
       <Header
         onRefresh={loadData}
         isLoading={loading}
@@ -121,8 +118,6 @@ export const App: React.FC = () => {
         onRegionChange={setRegion}
         dateRange={dateRange}
         onDateRangeChange={setDateRange}
-        theme={theme}
-        onThemeChange={setTheme}
         onNavigate={handleNavigate}
       />
 
@@ -133,21 +128,9 @@ export const App: React.FC = () => {
           anomaliesCount={kpis?.total_anomalies}
           wasteCount={kpis?.total_waste_cases}
           language={language}
-          theme={theme}
         />
 
         <main className="flex-1 p-6 overflow-y-auto max-w-7xl">
-          {activeTab === 'overview' && (
-            <OverviewPage
-              kpis={kpis}
-              wasteCases={wasteCases}
-              onNavigate={handleNavigate}
-              currency={currency}
-              language={language}
-              theme={theme}
-            />
-          )}
-
           {activeTab === 'dashboard' && (
             <ExecutiveDashboardPage
               kpis={kpis}
