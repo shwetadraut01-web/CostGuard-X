@@ -9,7 +9,8 @@ import {
   Sliders,
   Sparkles,
   BookOpen,
-  ShieldCheck
+  ShieldCheck,
+  Building2
 } from 'lucide-react';
 import type { Language } from '../utils/i18n';
 import { getTranslation } from '../utils/i18n';
@@ -44,6 +45,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'simulator', key: 'nav.simulator', icon: Sliders },
     { id: 'ai-explanation', key: 'nav.ai_explanation', icon: Sparkles },
     { id: 'methodology', key: 'nav.methodology', icon: BookOpen },
+    { id: 'jp', key: 'nav.jp_b2b', icon: Building2 },
   ];
 
   return (

@@ -14,6 +14,7 @@ import { ResourceDetailsPage } from './pages/ResourceDetails';
 import { WhatIfSimulatorPage } from './pages/WhatIfSimulator';
 import { AIExplanationPage } from './pages/AIExplanation';
 import { MethodologyPage } from './pages/Methodology';
+import { JapaneseB2BPage } from './pages/JapaneseB2BPage';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('overview');
@@ -102,7 +103,7 @@ export const App: React.FC = () => {
           theme={theme}
         />
 
-        <main className="flex-1 p-6 overflow-y-auto max-w-7xl">
+        <main className={`flex-1 overflow-y-auto ${activeTab === 'jp' ? 'p-0 max-w-none' : 'p-6 max-w-7xl'}`}>
           {activeTab === 'overview' && (
             <OverviewPage
               kpis={kpis}
@@ -174,6 +175,16 @@ export const App: React.FC = () => {
           {activeTab === 'ai-explanation' && <AIExplanationPage wasteCases={wasteCases} language={language} theme={theme} />}
 
           {activeTab === 'methodology' && <MethodologyPage language={language} theme={theme} />}
+
+          {activeTab === 'jp' && (
+            <JapaneseB2BPage
+              kpis={kpis}
+              wasteCases={wasteCases}
+              onNavigate={handleNavigate}
+              currency={currency}
+              language={language}
+            />
+          )}
         </main>
       </div>
     </div>

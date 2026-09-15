@@ -20,7 +20,8 @@
     "resource": "リソース詳細監査",
     "simulator": "削減シナリオシミュレーション",
     "ai_explanation": "エグゼクティブレポート",
-    "methodology": "分析手法と数式定義"
+    "methodology": "分析手法と数式定義",
+    "jp_b2b": "日本企業向け画面 (JP)"
   },
   "footer": {
     "advisory_title": "FinOps アドバイザリーモード",
