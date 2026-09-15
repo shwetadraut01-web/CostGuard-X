@@ -40,30 +40,34 @@ export const OverviewPage: React.FC<OverviewProps> = ({ kpis, wasteCases, onNavi
       <div className={`${
         isDark
           ? 'bg-gradient-to-r from-blue-900/60 via-slate-900 to-indigo-950 border-blue-800/40 text-white'
-          : 'bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-900 border-blue-800 text-white shadow-md'
-      } border rounded-2xl p-6 relative overflow-hidden`}>
+          : 'bg-gradient-to-r from-blue-50 via-indigo-50/70 to-slate-50 border-blue-200/80 text-slate-900 shadow-xs'
+      } border rounded-2xl p-6 relative overflow-hidden transition-all duration-200`}>
         <div className="max-w-3xl space-y-3 relative z-10">
-          <div className="inline-flex items-center space-x-2 bg-blue-500/20 border border-blue-400/40 text-blue-200 text-xs font-semibold px-3 py-1 rounded-full">
-            <ShieldCheck className="h-4 w-4 text-blue-300" />
+          <div className={`inline-flex items-center space-x-2 text-xs font-bold px-3 py-1 rounded-full ${
+            isDark ? 'bg-blue-500/20 border-blue-400/40 text-blue-200' : 'bg-blue-100 border border-blue-300 text-blue-800'
+          }`}>
+            <ShieldCheck className={`h-4 w-4 ${isDark ? 'text-blue-300' : 'text-blue-700'}`} />
             <span>FinOps Cloud Intelligence Engine</span>
           </div>
-          <h2 className="text-2xl font-bold text-white tracking-tight">
+          <h2 className={`text-2xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
             AWS Cloud Cost Waste Intelligence (No-ML Statistical Engine)
           </h2>
-          <p className="text-slate-200 text-sm leading-relaxed">
+          <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-200' : 'text-slate-600 font-medium'}`}>
             CostGuard-X analyzes AWS cloud cost and utilization metrics using time-series statistics, robust Z-scores (MAD), temporal event correlation, explainable waste fingerprinting, and counterfactual scenario modeling to pinpoint avoidable spend.
           </p>
           <div className="pt-2 flex items-center space-x-3">
             <button
               onClick={() => onNavigate('dashboard')}
-              className="bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs px-4 py-2.5 rounded-lg transition flex items-center space-x-2 shadow-md"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs px-4 py-2.5 rounded-lg transition flex items-center space-x-2 shadow-xs"
             >
               <span>View Executive Dashboard</span>
               <ArrowRight className="h-4 w-4" />
             </button>
             <button
               onClick={() => onNavigate('waste')}
-              className="bg-white/10 hover:bg-white/20 text-white font-medium text-xs px-4 py-2.5 rounded-lg border border-white/20 transition"
+              className={`${
+                isDark ? 'bg-white/10 hover:bg-white/20 text-white border-white/20' : 'bg-white hover:bg-slate-100 text-slate-800 border-slate-300 shadow-xs'
+              } font-semibold text-xs px-4 py-2.5 rounded-lg border transition`}
             >
               Explore Waste Cases ({kpis.total_waste_cases})
             </button>
