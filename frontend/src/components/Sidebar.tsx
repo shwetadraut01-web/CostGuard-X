@@ -50,7 +50,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <aside className="w-64 bg-white border-r border-[#E5E7EB] text-[#374151] shadow-xs min-h-screen flex flex-col justify-between p-4 shrink-0 font-['Noto_Sans_JP','Inter',sans-serif]">
       <div>
         <div className="px-3 py-2 text-[11px] font-bold text-[#6B7280] uppercase tracking-wider">
-          FinOps モジュール
+          {language === 'ja' ? 'FinOps モジュール' : 'FinOps Modules'}
         </div>
         <nav className="mt-1 space-y-1">
           {navItems.map((item) => {
