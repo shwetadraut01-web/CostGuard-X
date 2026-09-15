@@ -88,7 +88,7 @@ export const App: React.FC = () => {
     }
   };
 
-  // Dedicated Full-Screen Standalone Japanese Enterprise B2B Dashboard
+  // Dedicated Full-Screen Standalone Enterprise B2B Dashboard
   if (activeTab === 'jp' || activeTab === 'overview') {
     return (
       <div className="min-h-screen bg-[#F8FAFC]">
@@ -98,6 +98,7 @@ export const App: React.FC = () => {
           onNavigate={handleNavigate}
           currency={currency}
           language={language}
+          onLanguageChange={setLanguage}
         />
       </div>
     );

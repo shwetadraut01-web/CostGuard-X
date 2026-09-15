@@ -23,6 +23,7 @@ interface JapaneseB2BPageProps {
   onNavigate: (tab: string, resourceId?: string) => void;
   currency?: CurrencyCode;
   language?: Language;
+  onLanguageChange?: (lang: Language) => void;
 }
 
 export const JapaneseB2BPage: React.FC<JapaneseB2BPageProps> = ({
@@ -30,13 +31,22 @@ export const JapaneseB2BPage: React.FC<JapaneseB2BPageProps> = ({
   wasteCases: _wasteCases,
   onNavigate,
   currency = 'USD',
-  language: _language = 'en'
+  language = 'en',
+  onLanguageChange
 }) => {
   const [selectedFilter, setSelectedFilter] = useState<string>('ALL');
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [activeLang, setActiveLang] = useState<'EN' | 'JP'>('EN');
+  const [internalLang, setInternalLang] = useState<'EN' | 'JP'>(language === 'ja' ? 'JP' : 'EN');
 
+  const activeLang = onLanguageChange ? (language === 'ja' ? 'JP' : 'EN') : internalLang;
   const isJP = activeLang === 'JP';
+
+  const handleLangToggle = (lang: 'EN' | 'JP') => {
+    setInternalLang(lang);
+    if (onLanguageChange) {
+      onLanguageChange(lang === 'JP' ? 'ja' : 'en');
+    }
+  };
 
   // Sample data with both English and Japanese descriptions
   const defaultWasteRows = [
@@ -199,7 +209,7 @@ export const JapaneseB2BPage: React.FC<JapaneseB2BPageProps> = ({
 
           <div className="flex items-center border border-[#E5E7EB] rounded-md p-0.5 bg-gray-50">
             <button
-              onClick={() => setActiveLang('EN')}
+              onClick={() => handleLangToggle('EN')}
               className={`px-2 py-0.5 rounded text-[11px] font-bold transition ${
                 activeLang === 'EN' ? 'bg-[#0A66C2] text-white' : 'text-[#6B7280] hover:text-[#111827]'
               }`}
@@ -207,7 +217,7 @@ export const JapaneseB2BPage: React.FC<JapaneseB2BPageProps> = ({
               EN
             </button>
             <button
-              onClick={() => setActiveLang('JP')}
+              onClick={() => handleLangToggle('JP')}
               className={`px-2 py-0.5 rounded text-[11px] font-bold transition ${
                 activeLang === 'JP' ? 'bg-[#0A66C2] text-white' : 'text-[#6B7280] hover:text-[#111827]'
               }`}
