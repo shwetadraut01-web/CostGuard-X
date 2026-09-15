@@ -19,13 +19,13 @@ const getInitialTab = () => {
   if (typeof window !== 'undefined') {
     const path = window.location.pathname.toLowerCase();
     if (path.includes('overview')) return 'overview';
-    if (path.includes('dashboard')) return 'dashboard';
+    if (path.includes('jp')) return 'jp';
     if (path.includes('explorer')) return 'explorer';
     if (path.includes('anomalies')) return 'anomalies';
     if (path.includes('waste')) return 'waste';
   }
-  // Primary default web application landing page is Japanese B2B pleasant light theme
-  return 'jp';
+  // Primary default web application landing page is Executive Dashboard (English)
+  return 'dashboard';
 };
 
 export const App: React.FC = () => {
